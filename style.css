@@ -28,20 +28,20 @@
   padding: 0px;
   margin: 0px;
   font-family: "Lato Regular", "monospace";
-  color: rgba(255, 255, 255, 1);
+  color: rgba(26, 26, 26, 1);
 }
 body {
-  background-color: rgba(0, 0, 0, 1);
+  background-color: rgba(255, 255, 255, 1);
 }
-/*MENU-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
-.menu {
-  background-color: rgba(255, 255, 255, 0.9);
+/*MENU HOME--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+.menu_home {
+  background-color: rgba(255, 255, 255, 1);
   height: 7.5vh;
   width: 100%;
   position: fixed;
   z-index: 999;
 }
-.logo {
+.logo_menu_home {
   position: relative;
   height: 80%;
   padding-left: 6vw;
@@ -49,21 +49,19 @@ body {
   bottom: 10%;
   color: rgba(26, 26, 26, 1);
 }
-.menu_text {
+.menu_text_home {
   float: right;
   padding-right: 6vw;
   padding-top: 2.6vh;
 }
-.menu_text ul {
-}
-.menu_text li {
+.menu_text_home li {
   list-style: none;
   display: inline-block;
   float: left;
 }
-.menu_text li a {
-  font-family: "Lato Black", monospace;
-  color: rgba(26, 26, 26, 0.7);
+.menu_text_home li a {
+  font-family: "Lato Black", "monospace";
+  color: rgba(26, 26, 26, 1);
   text-decoration: none;
   font-size: 2.3vh;
   padding: 0 4vh;
@@ -71,26 +69,21 @@ body {
   -webkit-transition: color 200ms linear;
   transition: color 200ms linear;
 }
-.menu_text li a:hover {
+.menu_text_home li a:hover {
   color: rgba(255, 0, 102, 1);
 }
-.menu_space {
-  width: 100%;
-  height: 7.5vh;
-  background-color: rgba(255, 255, 255, 1);
-}
-/*INTRODUCTION-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
-.introduction {
+/*INTRODUCTION HOME------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+.introduction_home {
   background: linear-gradient(135deg, rgba(255, 0, 102, 0.9) 0%, rgba(205, 0, 178, 0.9) 55%, rgba(155, 0, 255, 0.3) 100%);
   background-repeat: no-repeat;
   width: 100%;
-  height: 92.5vh;
+  height: 100vh;
 }
-.margin_int {
+.margin_int_home {
   position: relative;
-  top: calc(50% - 8.05vh - 7.5vh);
+  top: 38%;
 }
-.margin_int h2 {
+.margin_int_home h2 {
   font-family: "Lato Black", "monospace";
   color: rgba(255, 255, 255, 0.6);
   padding-left: 9vw;
@@ -99,7 +92,7 @@ body {
   -webkit-transition: color 200ms linear;
   transition: color 200ms linear;
 }
-.margin_int h3 {
+.margin_int_home h3 {
   font-family: "Lato Bold", "monospace";
   color: rgba(255, 255, 255, 0.6);
   padding-left: 9vw;
@@ -108,7 +101,7 @@ body {
   -webkit-transition: color 200ms linear;
   transition: color 200ms linear;
 }
-.margin_int p {
+.margin_int_home p {
   color: rgba(255, 255, 255, 0.6);
   padding-left: 9vw;
   padding-bottom: 3vh;
@@ -116,133 +109,602 @@ body {
   -webkit-transition: color 200ms linear;
   transition: color 200ms linear;
 }
-.margin_int h2:hover {
+.margin_int_home h2:hover {
   color: rgba(255, 255, 255, 1);
 }
-.margin_int h3:hover {
+.margin_int_home h3:hover {
   color: rgba(255, 255, 255, 1);
 }
-.margin_int p:hover {
+.margin_int_home p:hover {
   color: rgba(255, 255, 255, 1);
 }
-.logo_int {
+.logo_int_home {
   position: absolute;
-  top: 18.75vh;
+  top: 18vh;
   right: 9vw;
   height: 70vh;
-  animation-name: logo_int_anim;
+  animation-name: logo_int_home_anim;
   animation-duration: 7s;
   animation-timing-function: ease;
   animation-iteration-count: infinite;
 }
-@keyframes logo_int_anim {
+@keyframes logo_int_home_anim {
   0% {
-    top: 18.75vh;
+    top: 18vh;
   }
   25% {
-    top: 14.75vh;
+    top: 14vh;
   }
   50% {
-    top: 18.75vh;
+    top: 18vh;
   }
   75% {
-    top: 22.75vh;
+    top: 22vh;
   }
   100% {
-    top: 18.75vh;
+    top: 18vh;
   }
 }
-.stars {
-  background-image: url("images/stars.jpg");
+.stars_home {
+  background-image: url("images/stars.png");
   background-size: cover;
   background-repeat: no-repeat;
   position: fixed;
-  height: calc(100vh - 7.5vh);
+  height: 100vh;
   width: 100%;
-  top: 7.5vh;
+  top: 0;
   z-index: -999;
 }
-/*INFORMATION------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
-.information {
+/*INFORMATION HOME-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+.information_home {
   width: 100%;
-  height: 65vh;
+  height: 60vh;
   background-color: rgba(26, 26, 26, 1);
   text-align: center;
 }
-.information h1 {
+.information_home h1 {
   font-family: "Lato Black", "monospace";
-  color: rgba(255, 255, 255, 0.6);
-  text-align: center;
-  padding: 6vh 0 6vh 0;
+  color: rgba(255, 255, 255, 1);
+  padding: 8vh 0 1vh 0;
   font-size: 5.3vh;
+}
+.information_home h3 {
+  color: rgba(255, 255, 255, 1);
+  padding-top: 4vh;
+  font-size: 2.9vh;
+}
+.table_info_home {
+  display: table;
+  margin-left: auto;
+  margin-right: auto;
+}
+.col_info_home {
+  display: table-cell;
+  padding: 2vw;
+  width: 8vw;
+}
+/*FOOTER HOME------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+.footer_home {
+  width: 100%;
+  height: 6.4vh;
+  background-color: rgba(255, 255, 255, 1);
+}
+.footer_home p {
+  color: rgba(26, 26, 26, 1);
+  font-size: 1.6vh;
+  padding-left: 9vw;
+  padding-top: 2.4vh;
+  padding-bottom: 0vh;
+}
+.footer_home a {
+  color: rgba(26, 26, 26, 0.7);
+  font-size: 1.6vh;
+  text-decoration: none;
   -webkit-transition: color 200ms linear;
   transition: color 200ms linear;
 }
-.information_text {
-  text-align: center;
-  padding-top: 33vh;
+.footer_home a:hover {
+  color: rgba(26, 26, 26, 1);
 }
-.information_text ul li {
+/*MENU PORTFOLIO---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+.menu_port {
+  background-color: rgba(255, 255, 255, 1);
+  height: 7.5vh;
+  width: 100%;
+  position: fixed;
+  z-index: 999;
+}
+.logo_menu_port {
+  position: relative;
+  height: 80%;
+  padding-left: 6vw;
+  top: 10%;
+  bottom: 10%;
+  color: rgba(26, 26, 26, 1);
+}
+.menu_text_port {
+  float: right;
+  padding-right: 6vw;
+  padding-top: 2.6vh;
+}
+.menu_text_port li {
   list-style: none;
   display: inline-block;
   float: left;
 }
-.information_text li h3 {
-  font-family: "Lato Bold", "monospace";
-  color: rgba(255, 255, 255, 0.6);
+.menu_text_port li a {
+  font-family: "Lato Black", "monospace";
+  color: rgba(26, 26, 26, 1);
   text-decoration: none;
-  text-align: center;
-  font-size: 3.6vh;
+  font-size: 2.3vh;
   padding: 0 4vh;
   display: block;
   -webkit-transition: color 200ms linear;
   transition: color 200ms linear;
 }
-.information h1:hover {
-  color: rgba(255, 255, 255, 1);
+.menu_text_port li a:hover {
+  color: rgba(80, 184, 107, 1);
 }
-.information h3:hover {
-  color: rgba(255, 255, 255, 1);
+/*INTRODUCTION PORTFOLIO-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+.introduction_port {
+  background: linear-gradient(135deg, rgba(80, 184, 107, 0.6) 0%, rgba(65, 160, 111, 0.6) 55%, rgba(38, 110, 75, 0.2) 100%);
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 100vh;
 }
-/*WORK IN PROGRESS-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
-.portfolio h1 {
+.margin_int_port {
+  position: relative;
+  top: 47vh;
+}
+.margin_int_port h1 {
   font-family: "Lato Black", "monospace";
   color: rgba(255, 255, 255, 1);
-  padding: 4vh 0 4vh 9vw;
-  font-size: 4.2vh;
+  font-size: 6vh;
+  text-align: center;
 }
-.about h1 {
+.northern_port {
+  background-image: url("images/northern.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: fixed;
+  height: 100vh;
+  width: 100%;
+  top: 0;
+  z-index: -999;
+}
+/*WORKS PORTFOLIO--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+.works_port {
+  width: 100%;
+  height: 52vh;
+  background-color: rgba(26, 26, 26, 1);
+  text-align: center;
+}
+.works_port p {
   font-family: "Lato Black", "monospace";
-  color: rgba(255, 255, 255, 1);
-  padding: 4vh 0 4vh 9vw;
-  font-size: 4.2vh;
+  background: linear-gradient(to right, rgba(80, 184, 107, 1) 0%, rgba(60, 60, 200, 1) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  padding-top: 4vh;
+  font-size: 4vh;
 }
-.contact h1 {
-  font-family: "Lato Black", "monospace";
-  color: rgba(255, 255, 255, 1);
-  padding: 4vh 0 4vh 9vw;
-  font-size: 4.2vh;
+.table_works_port {
+  display: table;
+  margin-left: auto;
+  margin-right: auto;
 }
-/*FOOTER-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
-footer {
+.col_works_port {
+  display: table-cell;
+  padding-left: 2vw;
+  padding-right: 2vw;
+  padding-top: 7.5vh;
+  width: 12vw;
+}
+.col_works_port img {
+  display: table-cell;
+  width: 14vw;
+  padding: 0;
+  border: 0.3vw solid rgba(80, 184, 107, 1);
+}
+/*FOOTER PORTFOLIO-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+.footer_port {
   width: 100%;
   height: 6.4vh;
   background-color: rgba(255, 255, 255, 1);
 }
-.footer {
-  color: rgba(26, 26, 26, 0.7);
+.footer_port p {
+  color: rgba(26, 26, 26, 1);
   font-size: 1.6vh;
-  padding-left: 150px;
+  padding-left: 9vw;
   padding-top: 2.4vh;
   padding-bottom: 0vh;
 }
-.footer a {
+.footer_port a {
   color: rgba(26, 26, 26, 0.7);
   font-size: 1.6vh;
   text-decoration: none;
   -webkit-transition: color 200ms linear;
   transition: color 200ms linear;
 }
-.footer a:hover {
+.footer_port a:hover {
+  color: rgba(26, 26, 26, 1);
+}
+/*MENU ABOUT-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+.menu_about {
+  background-color: rgba(255, 255, 255, 1);
+  height: 7.5vh;
+  width: 100%;
+  position: fixed;
+  z-index: 999;
+}
+.logo_menu_about {
+  position: relative;
+  height: 80%;
+  padding-left: 6vw;
+  top: 10%;
+  bottom: 10%;
+  color: rgba(26, 26, 26, 1);
+}
+.menu_text_about {
+  float: right;
+  padding-right: 6vw;
+  padding-top: 2.6vh;
+}
+.menu_text_about li {
+  list-style: none;
+  display: inline-block;
+  float: left;
+}
+.menu_text_about li a {
+  font-family: "Lato Black", "monospace";
+  color: rgba(26, 26, 26, 1);
+  text-decoration: none;
+  font-size: 2.3vh;
+  padding: 0 4vh;
+  display: block;
+  -webkit-transition: color 200ms linear;
+  transition: color 200ms linear;
+}
+.menu_text_about li a:hover {
+  color: rgba(254, 190, 64, 1);
+}
+/*INTRODUCTION ABOUT-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+.introduction_about {
+  background: linear-gradient(135deg, rgba(254, 190, 64, 0.6) 0%, rgba(245, 153, 49, 0.6) 55%, rgba(236, 117, 35, 0.2) 100%);
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 100vh;
+}
+.margin_int_about {
+  position: relative;
+  top: 47vh;
+}
+.margin_int_about h1 {
+  font-family: "Lato Black", "monospace";
+  color: rgba(255, 255, 255, 1);
+  font-size: 6vh;
+  text-align: center;
+}
+.coffee_about {
+  background-image: url("images/coffee.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: fixed;
+  height: 100vh;
+  width: 100%;
+  top: 0;
+  z-index: -999;
+}
+/*ABOUT ME---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+.about_me {
+  width: 100%;
+  height: 30vh;
+  background-color: rgba(255, 255, 255, 1);
+}
+.about_me p {
+  font-family: "Lato Regular", "monospace";
+  color: rgba(26, 26, 26, 1);
+  padding-top: 6vh;
+  padding-left: 9vw;
+  font-size: 3vh;
+}
+/*FOOTER ABOUT-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+.footer_about {
+  width: 100%;
+  height: 6.4vh;
+  background-color: rgba(255, 255, 255, 1);
+}
+.footer_about p {
+  color: rgba(26, 26, 26, 1);
+  font-size: 1.6vh;
+  padding-left: 9vw;
+  padding-top: 2.4vh;
+  padding-bottom: 0vh;
+}
+.footer_about a {
+  color: rgba(26, 26, 26, 0.7);
+  font-size: 1.6vh;
+  text-decoration: none;
+  -webkit-transition: color 200ms linear;
+  transition: color 200ms linear;
+}
+.footer_about a:hover {
+  color: rgba(26, 26, 26, 1);
+}
+/*MENU CONTACT-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+.menu_cont {
+  background-color: rgba(255, 255, 255, 1);
+  height: 7.5vh;
+  width: 100%;
+  position: fixed;
+  z-index: 999;
+}
+.logo_menu_cont {
+  position: relative;
+  height: 80%;
+  padding-left: 6vw;
+  top: 10%;
+  bottom: 10%;
+  color: rgba(26, 26, 26, 1);
+}
+.menu_text_cont {
+  float: right;
+  padding-right: 6vw;
+  padding-top: 2.6vh;
+}
+.menu_text_cont li {
+  list-style: none;
+  display: inline-block;
+  float: left;
+}
+.menu_text_cont li a {
+  font-family: "Lato Black", "monospace";
+  color: rgba(26, 26, 26, 1);
+  text-decoration: none;
+  font-size: 2.3vh;
+  padding: 0 4vh;
+  display: block;
+  -webkit-transition: color 200ms linear;
+  transition: color 200ms linear;
+}
+.menu_text_cont li a:hover {
+  color: rgba(43, 179, 205, 1);
+}
+/*INTRODUCTION CONTACT---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+.introduction_cont {
+  width: 100%;
+  height: 100vh;
+}
+.margin_int_cont {
+  position: relative;
+  top: 47vh;
+}
+.margin_int_cont h1 {
+  font-family: "Lato Black", "monospace";
+  color: rgba(255, 255, 255, 1);
+  font-size: 6vh;
+  text-align: center;
+}
+.sky_cont {
+  background-image: url("images/sky.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: fixed;
+  height: 100vh;
+  width: 100%;
+  top: 0;
+  z-index: -999;
+}
+/*CONTACT ME-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+.contact_me {
+  width: 100%;
+  height: 30vh;
+  background-color: rgba(255, 255, 255, 1);
+  text-align: center;
+}
+.links_cont {
+  padding-top: 4vh;
+}
+.contact_me p {
+  font-family: "Lato Regular", "monospace";
+  color: rgba(26, 26, 26, 1);
+  padding-top: 1vh;
+  font-size: 2vh;
+}
+.contact_me a {
+  text-decoration: none;
+}
+.contact_me_youtube {
+  -webkit-transition: color 200ms linear;
+  transition: color 200ms linear;
+}
+.contact_me_twitch {
+  -webkit-transition: color 200ms linear;
+  transition: color 200ms linear;
+}
+.contact_me_twitter {
+  -webkit-transition: color 200ms linear;
+  transition: color 200ms linear;
+}
+.contact_me_instagram {
+  -webkit-transition: color 200ms linear;
+  transition: color 200ms linear;
+}
+.contact_me_steam {
+  -webkit-transition: color 200ms linear;
+  transition: color 200ms linear;
+}
+.contact_me_behance {
+  -webkit-transition: color 200ms linear;
+  transition: color 200ms linear;
+}
+.contact_me_youtube:hover {
+  color: rgba(244, 67, 54, 1);
+}
+.contact_me_twitch:hover {
+  color: rgba(96, 45, 130, 1);
+}
+.contact_me_twitter:hover {
+  color: rgba(43, 179, 205, 1);
+}
+.contact_me_instagram:hover {
+  color: rgba(254, 190, 64, 1);
+}
+.contact_me_steam:hover {
+  color: rgba(26, 35, 126, 1);
+}
+.contact_me_behance:hover {
+  color: rgba(0, 137, 123, 1);
+}
+/*FOOTER CONTACT---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+.footer_cont {
+  width: 100%;
+  height: 6.4vh;
+  background-color: rgba(255, 255, 255, 1);
+}
+.footer_cont p {
+  color: rgba(26, 26, 26, 1);
+  font-size: 1.6vh;
+  padding-left: 9vw;
+  padding-top: 2.4vh;
+  padding-bottom: 0vh;
+}
+.footer_cont a {
+  color: rgba(26, 26, 26, 0.7);
+  font-size: 1.6vh;
+  text-decoration: none;
+  -webkit-transition: color 200ms linear;
+  transition: color 200ms linear;
+}
+.footer_cont a:hover {
+  color: rgba(26, 26, 26, 1);
+}
+/*MENU PRIVACY POLICY----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+.menu_priv {
+  background-color: rgba(255, 255, 255, 1);
+  height: 7.5vh;
+  width: 100%;
+  position: fixed;
+  z-index: 999;
+}
+.logo_menu_priv {
+  position: relative;
+  height: 80%;
+  padding-left: 6vw;
+  top: 10%;
+  bottom: 10%;
+  color: rgba(26, 26, 26, 1);
+}
+.menu_text_priv {
+  float: right;
+  padding-right: 6vw;
+  padding-top: 2.6vh;
+}
+.menu_text_priv li {
+  list-style: none;
+  display: inline-block;
+  float: left;
+}
+.menu_text_priv li a {
+  font-family: "Lato Black", "monospace";
+  color: rgba(26, 26, 26, 1);
+  text-decoration: none;
+  font-size: 2.3vh;
+  padding: 0 4vh;
+  display: block;
+  -webkit-transition: color 200ms linear;
+  transition: color 200ms linear;
+}
+.menu_text_priv li a:hover {
+  color: rgba(255, 0, 102, 1);
+}
+/*PRIVACY POLICY---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+body {
+  background-color: rgba(26, 26, 26, 1);
+}
+.privacy_policy {
+  position: relative;
+  padding-top: 11vh;
+  padding-bottom: 5vh;
+  margin-left: 9vw;
+  margin-right: 9vw;
+  background-color: rgba(26, 26, 26, 1);
+}
+.privacy_policy h1 {
+  font-family: "Lato Black", "monospace";
+  color: rgba(255, 255, 255, 1);
+  font-size: 6vh;
+}
+.privacy_policy h2 {
+  font-family: "Lato Bold", "monospace";
+  color: rgba(255, 255, 255, 1);
+  font-size: 4vh;
+  padding-top: 1.8vh;
+}
+.privacy_policy h3 {
+  font-family: "Lato Bold", "monospace";
+  color: rgba(255, 255, 255, 1);
+  font-size: 3.5vh;
+  padding-top: 1.7vh;
+}
+.privacy_policy h4 {
+  font-family: "Lato Bold", "monospace";
+  color: rgba(255, 255, 255, 1);
+  font-size: 3vh;
+  padding-top: 1.6vh;
+}
+.privacy_policy p {
+  font-family: "Lato Regular", "monospace";
+  color: rgba(255, 255, 255, 1);
+  font-size: 2vh;
+  padding-top: 1.5vh;
+}
+.privacy_policy a {
+  text-decoration: none;
+  font-family: "Lato Regular", "monospace";
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 2vh;
+  padding-top: 1.5vh;
+  -webkit-transition: color 200ms linear;
+  transition: color 200ms linear;
+}
+.privacy_policy ul {
+  text-decoration: none;
+  list-style-type: none;
+  font-family: "Lato Regular", "monospace";
+  color: rgba(255, 255, 255, 1);
+  font-size: 2vh;
+  padding-top: 1.5vh;
+}
+.privacy_policy li {
+  text-decoration: none;
+  font-family: "Lato Regular", "monospace";
+  color: rgba(255, 255, 255, 1);
+  font-size: 2vh;
+  padding-top: 1.5vh;
+}
+.privacy_policy a:hover {
+  color: rgba(255, 255, 255, 1);
+}
+/*FOOTER PRIVACY POLICY--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+.footer_priv {
+  width: 100%;
+  height: 6.4vh;
+  background-color: rgba(255, 255, 255, 1);
+}
+.footer_priv p {
+  color: rgba(26, 26, 26, 1);
+  font-size: 1.6vh;
+  padding-left: 9vw;
+  padding-top: 2.4vh;
+  padding-bottom: 0vh;
+}
+.footer_priv a {
+  color: rgba(26, 26, 26, 0.7);
+  font-size: 1.6vh;
+  text-decoration: none;
+  -webkit-transition: color 200ms linear;
+  transition: color 200ms linear;
+}
+.footer_priv a:hover {
   color: rgba(26, 26, 26, 1);
 }
