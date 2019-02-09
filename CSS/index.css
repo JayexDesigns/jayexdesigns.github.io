@@ -1,0 +1,228 @@
+/*FONT IMPORT---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+@font-face {
+  src: url(../fonts/Lobster-Regular.ttf);
+  font-family: "Lobster";
+}
+@font-face {
+  src: url(../fonts/Lato-Black.ttf);
+  font-family: "Lato Black";
+}
+@font-face {
+  src: url(../fonts/Lato-Bold.ttf);
+  font-family: "Lato Bold";
+}
+@font-face {
+  src: url(../fonts/Lato-Regular.ttf);
+  font-family: "Lato Regular";
+}
+@font-face {
+  src: url(../fonts/Nexa-Bold.otf);
+  font-family: "Nexa Bold";
+}
+@font-face {
+  src: url(../fonts/Nexa-Light.otf);
+  font-family: "Nexa Light";
+}
+/*GENERAL-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+* {
+  padding: 0px;
+  margin: 0px;
+  font-family: "Lato Regular", "monospace";
+  color: rgba(26, 26, 26, 1);
+}
+body {
+  background-color: rgba(255, 255, 255, 1);
+}
+*::selection {
+  background: rgba(255, 0, 102, 1);
+  color: rgba(255, 255, 255, 1);
+}
+/*MENU HOME-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+.menu_home {
+  background-color: rgba(255, 255, 255, 1);
+  height: 7.5vh;
+  width: 100%;
+  position: fixed;
+  z-index: 999;
+}
+.logo_menu_home {
+  position: relative;
+  height: 80%;
+  padding-left: 6vw;
+  top: 10%;
+  bottom: 10%;
+  color: rgba(26, 26, 26, 1);
+}
+.menu_text_home {
+  float: right;
+  padding-right: 6vw;
+  padding-top: 2.6vh;
+}
+.menu_text_home li {
+  list-style: none;
+  display: inline-block;
+  float: left;
+}
+.menu_text_home li a {
+  font-family: "Lato Black", "monospace";
+  color: rgba(26, 26, 26, 1);
+  text-decoration: none;
+  font-size: 2.3vh;
+  padding: 0 4vh;
+  display: block;
+  -webkit-transition: color 200ms linear;
+  transition: color 200ms linear;
+}
+.menu_text_home li a:hover {
+  color: rgba(255, 0, 102, 1);
+}
+/*INTRODUCTION HOME---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+.introduction_home {
+  background: linear-gradient(135deg, rgba(255, 0, 102, 0.9) 0%, rgba(205, 0, 178, 0.9) 55%, rgba(155, 0, 255, 0.3) 100%);
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 100vh;
+}
+.margin_int_home {
+  position: relative;
+  top: 38%;
+}
+.margin_int_home h2 {
+  font-family: "Lato Black", "monospace";
+  color: rgba(255, 255, 255, 0.6);
+  padding-left: 9vw;
+  padding-bottom: 3.7vh;
+  font-size: 3.7vh;
+  -webkit-transition: color 200ms linear;
+  transition: color 200ms linear;
+}
+.margin_int_home h3 {
+  font-family: "Lato Bold", "monospace";
+  color: rgba(255, 255, 255, 0.6);
+  padding-left: 9vw;
+  padding-bottom: 1vh;
+  font-size: 2.7vh;
+  -webkit-transition: color 200ms linear;
+  transition: color 200ms linear;
+}
+.margin_int_home p {
+  color: rgba(255, 255, 255, 0.6);
+  padding-left: 9vw;
+  padding-bottom: 3vh;
+  font-size: 2vh;
+  -webkit-transition: color 200ms linear;
+  transition: color 200ms linear;
+}
+.margin_int_home h2:hover {
+  color: rgba(255, 255, 255, 1);
+}
+.margin_int_home h3:hover {
+  color: rgba(255, 255, 255, 1);
+}
+.margin_int_home p:hover {
+  color: rgba(255, 255, 255, 1);
+}
+.margin_int_home h2::selection {
+  background: rgba(255, 255, 255, 1);
+  color: rgba(255, 0, 102, 1);
+}
+.margin_int_home h3::selection {
+  background: rgba(255, 255, 255, 1);
+  color: rgba(255, 0, 102, 1);
+}
+.margin_int_home p::selection {
+  background: rgba(255, 255, 255, 1);
+  color: rgba(255, 0, 102, 1);
+}
+.logo_int_home {
+  position: absolute;
+  top: 18vh;
+  right: 9vw;
+  height: 70vh;
+  animation-name: logo_int_home_anim;
+  animation-duration: 7s;
+  animation-timing-function: ease;
+  animation-iteration-count: infinite;
+}
+.logo_int_home::selection {
+  background: rgba(255, 255, 255, 1);
+  color: rgba(255, 0, 102, 1);
+}
+@keyframes logo_int_home_anim {
+  0% {
+    top: 18vh;
+  }
+  25% {
+    top: 14vh;
+  }
+  50% {
+    top: 18vh;
+  }
+  75% {
+    top: 22vh;
+  }
+  100% {
+    top: 18vh;
+  }
+}
+.stars_home {
+  background-image: url("../images/stars.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: fixed;
+  height: 100vh;
+  width: 100%;
+  top: 0;
+  z-index: -999;
+}
+/*INFORMATION HOME----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+.information_home {
+  width: 100%;
+  height: 60vh;
+  background-color: rgba(26, 26, 26, 1);
+  text-align: center;
+}
+.information_home h1 {
+  font-family: "Lato Black", "monospace";
+  color: rgba(255, 255, 255, 1);
+  padding: 8vh 0 1vh 0;
+  font-size: 5.3vh;
+}
+.information_home h3 {
+  color: rgba(255, 255, 255, 1);
+  padding-top: 4vh;
+  font-size: 2.9vh;
+}
+.table_info_home {
+  display: table;
+  margin-left: auto;
+  margin-right: auto;
+}
+.col_info_home {
+  display: table-cell;
+  padding: 2vw;
+  width: 8vw;
+}
+/*FOOTER HOME---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+.footer_home {
+  width: 100%;
+  height: 6.4vh;
+  background-color: rgba(255, 255, 255, 1);
+}
+.footer_home p {
+  color: rgba(26, 26, 26, 1);
+  font-size: 1.6vh;
+  padding-left: 9vw;
+  padding-top: 2.4vh;
+  padding-bottom: 0vh;
+}
+.footer_home a {
+  color: rgba(26, 26, 26, 0.7);
+  font-size: 1.6vh;
+  text-decoration: none;
+  -webkit-transition: color 200ms linear;
+  transition: color 200ms linear;
+}
+.footer_home a:hover {
+  color: rgba(26, 26, 26, 1);
+}
