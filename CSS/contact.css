@@ -1,0 +1,192 @@
+/*FONT IMPORT---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+@font-face {
+  src: url(../fonts/Lobster-Regular.ttf);
+  font-family: "Lobster";
+}
+@font-face {
+  src: url(../fonts/Lato-Black.ttf);
+  font-family: "Lato Black";
+}
+@font-face {
+  src: url(../fonts/Lato-Bold.ttf);
+  font-family: "Lato Bold";
+}
+@font-face {
+  src: url(../fonts/Lato-Regular.ttf);
+  font-family: "Lato Regular";
+}
+@font-face {
+  src: url(../fonts/Nexa-Bold.otf);
+  font-family: "Nexa Bold";
+}
+@font-face {
+  src: url(../fonts/Nexa-Light.otf);
+  font-family: "Nexa Light";
+}
+/*GENERAL-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+* {
+  padding: 0px;
+  margin: 0px;
+  font-family: "Lato Regular", "monospace";
+  color: rgba(26, 26, 26, 1);
+}
+body {
+  background-color: rgba(255, 255, 255, 1);
+}
+*::selection {
+  background: rgba(43, 179, 205, 1);
+  color: rgba(255, 255, 255, 1);
+}
+/*MENU CONTACT--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+.menu_cont {
+  background-color: rgba(255, 255, 255, 1);
+  height: 7.5vh;
+  width: 100%;
+  position: fixed;
+  z-index: 999;
+}
+.logo_menu_cont {
+  position: relative;
+  height: 80%;
+  padding-left: 6vw;
+  top: 10%;
+  bottom: 10%;
+  color: rgba(26, 26, 26, 1);
+}
+.menu_text_cont {
+  float: right;
+  padding-right: 6vw;
+  padding-top: 2.6vh;
+}
+.menu_text_cont li {
+  list-style: none;
+  display: inline-block;
+  float: left;
+}
+.menu_text_cont li a {
+  font-family: "Lato Black", "monospace";
+  color: rgba(26, 26, 26, 1);
+  text-decoration: none;
+  font-size: 2.3vh;
+  padding: 0 4vh;
+  display: block;
+  -webkit-transition: color 200ms linear;
+  transition: color 200ms linear;
+}
+.menu_text_cont li a:hover {
+  color: rgba(43, 179, 205, 1);
+}
+/*INTRODUCTION CONTACT------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+.introduction_cont {
+  width: 100%;
+  height: 100vh;
+}
+.margin_int_cont {
+  position: relative;
+  top: 47vh;
+}
+.margin_int_cont h1 {
+  font-family: "Lato Black", "monospace";
+  color: rgba(255, 255, 255, 1);
+  font-size: 6vh;
+  text-align: center;
+}
+.margin_int_cont h1::selection {
+  background: rgba(255, 255, 255, 1);
+  color: rgba(43, 179, 205, 1);
+}
+.sky_cont {
+  background-image: url("../images/sky.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: fixed;
+  height: 100vh;
+  width: 100%;
+  top: 0;
+  z-index: -999;
+}
+/*CONTACT ME----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+.contact_me {
+  width: 100%;
+  height: 30vh;
+  background-color: rgba(255, 255, 255, 1);
+  text-align: center;
+}
+.links_cont {
+  padding-top: 4vh;
+}
+.contact_me p {
+  font-family: "Lato Regular", "monospace";
+  color: rgba(26, 26, 26, 1);
+  padding-top: 1vh;
+  font-size: 2vh;
+  text-decoration: underline;
+}
+.contact_me a {
+  text-decoration: none;
+}
+.contact_me_youtube {
+  -webkit-transition: color 200ms linear;
+  transition: color 200ms linear;
+}
+.contact_me_twitch {
+  -webkit-transition: color 200ms linear;
+  transition: color 200ms linear;
+}
+.contact_me_twitter {
+  -webkit-transition: color 200ms linear;
+  transition: color 200ms linear;
+}
+.contact_me_instagram {
+  -webkit-transition: color 200ms linear;
+  transition: color 200ms linear;
+}
+.contact_me_steam {
+  -webkit-transition: color 200ms linear;
+  transition: color 200ms linear;
+}
+.contact_me_behance {
+  -webkit-transition: color 200ms linear;
+  transition: color 200ms linear;
+}
+.contact_me_youtube:hover {
+  color: rgba(244, 67, 54, 1);
+}
+.contact_me_twitch:hover {
+  color: rgba(96, 45, 130, 1);
+}
+.contact_me_twitter:hover {
+  color: rgba(43, 179, 205, 1);
+}
+.contact_me_instagram:hover {
+  color: rgba(254, 190, 64, 1);
+}
+.contact_me_steam:hover {
+  color: rgba(26, 35, 126, 1);
+}
+.contact_me_behance:hover {
+  color: rgba(0, 137, 123, 1);
+}
+/*FOOTER CONTACT------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+.footer_cont {
+  width: 100%;
+  height: 6.4vh;
+  background-color: rgba(255, 255, 255, 1);
+}
+.footer_cont p {
+  color: rgba(26, 26, 26, 1);
+  font-size: 1.6vh;
+  padding-left: 9vw;
+  padding-top: 2.4vh;
+  padding-bottom: 0vh;
+}
+.footer_cont a {
+  color: rgba(26, 26, 26, 0.7);
+  font-size: 1.6vh;
+  text-decoration: none;
+  -webkit-transition: color 200ms linear;
+  transition: color 200ms linear;
+}
+.footer_cont a:hover {
+  color: rgba(26, 26, 26, 1);
+}
