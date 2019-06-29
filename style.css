@@ -1,0 +1,28 @@
+html {
+  padding: 0;
+  margin: 0;
+}
+body {
+  background: #ffd200;
+}
+p {
+  color: #1a1a1a;
+  text-decoration: none;
+  font-size: 100px;
+  font-family: "arial";
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: 900;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -webkit-transition: color 200ms linear;
+  -moz-transition: color 200ms linear;
+  -o-transition: color 200ms linear;
+  transition: color 200ms linear;
+}
+html::selection {
+  background: #1a1a1a;
+  color: #ffd200;
+}
