@@ -14,7 +14,7 @@ p {
   text-transform: uppercase;
   font-weight: 900;
   position: absolute;
-  top: 50%;
+  top: 30%;
   left: 50%;
   transform: translate(-50%, -50%);
   -webkit-transition: color 200ms linear;
