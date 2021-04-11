@@ -249,6 +249,7 @@ body, body * {
 }
 
 .works > div > section > a {
+    text-decoration: none;
     margin-top: 1rem;
     font-size: 1.2rem;
     font-weight: 800;
