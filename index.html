@@ -6,35 +6,179 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="author" content="Jayex Designs">
     <meta name="description:" content="Jayex Designs Personal Portfolio">
-    <link rel="shortcut icon" type="image/png" href="assets/favicon/favicon.ico">
+    <link rel="shortcut icon" type="image/png" href="assets/favicon/white.ico">
     <link rel="stylesheet" href="css/style.css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&display=swap" rel="stylesheet">
     <title>Jayex Designs Portfolio</title>
 </head>
-<body>
+<body onload="loadHandle()">
     <header class="header">
         <div>
-            <a href="#"><img src="assets/img/logo.png" alt="Something Went Wrong"></a>
+            <a href="#homeHeader"><img src="assets/img/whiteLogo.png" alt="Something Went Wrong"></a>
         </div>
         <nav>
             <ul>
-                <li><a href="#">HOME</a></li>
-                <li><a href="#">WORKS</a></li>
-                <li><a href="#">ABOUT</a></li>
-                <li><a href="#">CONTACT</a></li>
+                <li><a class="navHome" href="#homeHeader">HOME</a></li>
+                <li><a class="navWorks" href="#worksHeader">WORKS</a></li>
+                <li><a class="navAbout" href="#aboutHeader">ABOUT</a></li>
+                <li><a class="navContact" href="#contactHeader">CONTACT</a></li>
             </ul>
         </nav>
     </header>
     <div class="headerSpace"></div>
 
-    <div class="home"></div>
 
-    <div class="works"></div>
 
-    <div class="about"></div>
+    <div id="homeHeader"></div>
+    <div class="home contentSection">
+        <div>
+            <section>
+                <h1>Hi, I'm Jayex Designs</h1>
+                <br>
+                <p>I'm a full stack developer and graphic designer</p>
+                <br>
+                <p>This is my portfolio where you will be able to find <a href="#worksHeader">my projects</a>, details <a href="aboutHeader">about me</a> and <a href="#contactHeader">contact information</a></p>
+            </section>
+            <section>
+                <img src="assets/img/whiteLogo.png" alt="Somathing Went Wrong">
+            </section>
+        </div>
+    </div>
 
-    <div class="contact"></div>
+
+
+    <div id="worksHeader"></div>
+    <div class="works contentSection">
+        <div class="worksLeft">
+            <section>
+                <h2>Graphic Design Project</h2>
+                <br>
+                <p>Bla bla bla bla bla</p>
+                <br>
+                <p>Bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla </p>
+                <br>
+                <p>Bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla </p>
+                <br>
+                <a>Go To</a>
+            </section>
+            <section class="worksImage">
+                <img src="assets/img/worksTest.png" alt="Something Went Wrong">
+            </section>
+        </div>
+
+        <div class="worksRight">
+            <section>
+                <h2>Graphic Design Project</h2>
+                <br>
+                <p>Bla bla bla bla bla</p>
+                <br>
+                <p>Bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla </p>
+                <br>
+                <p>Bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla </p>
+                <br>
+                <a>Go To</a>
+            </section>
+            <section class="worksImage">
+                <img src="assets/img/worksTest.png" alt="Something Went Wrong">
+            </section>
+        </div>
+
+        <div class="worksLeft">
+            <section>
+                <h2>Graphic Design Project</h2>
+                <br>
+                <p>Bla bla bla bla bla</p>
+                <br>
+                <p>Bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla </p>
+                <br>
+                <p>Bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla </p>
+                <br>
+                <a>Go To</a>
+            </section>
+            <section class="worksImage">
+                <img src="assets/img/worksTest.png" alt="Something Went Wrong">
+            </section>
+        </div>
+    </div>
+
+
+
+    <div id="aboutHeader"></div>
+    <div class="about contentSection">
+        <div>
+            <section>
+                <h1>About Me</h1>
+                <p>I'm <b id="years"></b> years old, my real name is Joaquín Tourón and I mainly dedicate myself to full stack programming, I also do data science projects, scripting, artificial intelligence...</p>
+                <p>Outside of programming I also dedicate myself to graphic design, video editing and photography.</p>
+                <p>I am completely self-taught and practically everything I have learned has been through my own research and projects that I have decided to do myself.</p>
+                <br>
+                <p>I have completed primary and secondary education, I am currently studying at the <a href="https://www.upc.edu/en" target="_blank">Polytechnic University of Catalonia.</a></p>
+                <p>Previously, I have worked at <a href="https://www.cimne.com/" target="_blank">CIMNE</a> during a training stay where I was in charge of creating the website for an internal project and I learned how a team of programmers works internally.</p>
+                <p>I have also made several designs for <a href="http://dianamorris.es/" target="_blank">Espai Kairos</a>, cards, posters, web design...</p>
+            </section>
+            <section class="aboutSkills">
+                <p>This are my programming skills:</p>
+                <div>
+                    <a href="https://www.python.org/" target="_blank"><img src="assets/skills/Python.png" alt="Something Went Wrong"></a>
+                    <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank"><img src="assets/skills/Javascript.png" alt="Something Went Wrong"></a>
+                    <a href="https://www.typescriptlang.org/" target="_blank"><img src="assets/skills/Typescript.png" alt="Something Went Wrong"></a>
+                    <a href="https://nodejs.org" target="_blank"><img src="assets/skills/Node Js.png" alt="Something Went Wrong"></a>
+                    <a href="https://developer.mozilla.org/en-US/docs/Web/HTML" target="_blank"><img src="assets/skills/HTML.png" alt="Something Went Wrong"></a>
+                    <a href="https://developer.mozilla.org/en-US/docs/Web/CSS" target="_blank"><img src="assets/skills/CSS.png" alt="Something Went Wrong"></a>
+                    <a href="https://flutter.dev/" target="_blank"><img src="assets/skills/Flutter.png" alt="Something Went Wrong"></a>
+                    <a href="https://en.wikipedia.org/wiki/C_(programming_language)" target="_blank"><img src="assets/skills/C.png" alt="Something Went Wrong"></a>
+                    <a href="https://en.wikipedia.org/wiki/C%2B%2B" target="_blank"><img src="assets/skills/C++.png" alt="Something Went Wrong"></a>
+                    <a href="https://docs.microsoft.com/es-es/dotnet/csharp/" target="_blank"><img src="assets/skills/CSharp.png" alt="Something Went Wrong"></a>
+                    <a href="https://en.wikipedia.org/wiki/SQL" target="_blank"><img src="assets/skills/SQL.png" alt="Something Went Wrong"></a>
+                    <a href="https://reactjs.org/" target="_blank"><img src="assets/skills/React.png" alt="Something Went Wrong"></a>
+                    <a href="https://redux.js.org/" target="_blank"><img src="assets/skills/Redux.png" alt="Something Went Wrong"></a>
+                    <a href="https://material-ui.com/" target="_blank"><img src="assets/skills/MaterialUI.png" alt="Something Went Wrong"></a>
+                    <a href="https://threejs.org" target="_blank"><img src="assets/skills/Three Js.png" alt="Something Went Wrong"></a>
+                    <a href="https://jquery.com/" target="_blank"><img src="assets/skills/JQuery.png" alt="Something Went Wrong"></a>
+                    <a href="https://getbootstrap.com" target="_blank"><img src="assets/skills/Bootstrap.png" alt="Something Went Wrong"></a>
+                    <a href="https://en.wikipedia.org/wiki/Bash_(Unix_shell)" target="_blank"><img src="assets/skills/Bash.png" alt="Something Went Wrong"></a>
+                    <a href="https://www.raspberrypi.org/" target="_blank"><img src="assets/skills/Raspberry Pi.png" alt="Something Went Wrong"></a>
+                </div>
+            </section>
+            <section class="aboutResume">
+                <p>Download my resume:</p>
+                <a href="assets/others/JayexDesignsResume.pdf" download>DOWNLOAD</a>
+            </section>
+            <section class="aboutCertificates">
+                <p>I also have a considerable amount of certificates that I earned after completing programming courses.</p>
+                <div></div>
+                <div class="aboutImages">
+                    <img id="aboutImage1" src="assets/certificates/3.jpg" alt="Something Went Wrong">
+                    <img id="aboutImage2" src="assets/certificates/2.jpg" alt="Something Went Wrong">
+                    <img id="aboutImage3" src="assets/certificates/1.jpg" alt="Something Went Wrong">
+                </div>
+            </section>
+        </div>
+    </div>
+
+
+
+    <div id="contactHeader"></div>
+    <div class="contact contentSection">
+        <div>
+            <h1>Contact</h1>
+            <p>You can find me on the following social media:</p>
+            <a href="https://discordapp.com/users/286817063878656012" target="_blank" id="linkDiscord">Discord</a>
+            <a href="https://jayexdesigns.github.io" target="_blank" id="linkGithub">Github</a>
+            <a href="https://twitter.com/Jayex_Designs" target="_blank" id="linkTwitter">Twitter</a>
+            <a href="https://www.reddit.com/user/JayexDesigns/" target="_blank" id="linkReddit">Reddit</a>
+            <a href="https://twitch.tv/jayex_designs" target="_blank" id="linkTwitch">Twitch</a>
+            <a href="https://www.youtube.com/channel/UCP8HMQBxn4Pfk0L0TzvN_Vw" target="_blank" id="linkYoutube">Youtube</a>
+            <a href="https://www.instagram.com/jayex_photo/" target="_blank" id="linkInstagram">Instagram</a>
+            <a href="https://steamcommunity.com/id/jayexdesigns" target="_blank" id="linkSteam">Steam</a>
+            <br><br>
+            <p>Or you can contact me by email:</p>
+            <a href="#">joaquintouron@gmail.com</a>
+        </div>
+    </div>
+
+
 
     <footer></footer>
 

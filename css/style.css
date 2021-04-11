@@ -1,3 +1,7 @@
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     background-color: #1a1a1a;
     font-family: 'Manrope', sans-serif;
@@ -16,11 +20,12 @@ body, body * {
     width: calc(100% - 10rem);
     height: 6rem;
     padding: 0 5rem;
-    background-color: #ffffff;
+    background-color: #1a1a1a;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
+    z-index: 1;
 }
 
 .header > div {
@@ -42,19 +47,42 @@ body, body * {
 }
 
 .header > nav > ul > li > a {
+    position: relative;
+    display: inline-block;
     text-decoration: none;
-    color: #1a1a1a;
+    color: #ffffff;
     font-size: 1.4rem;
     font-weight: 800;
+    padding: 0.25rem 0;
+    transition: color .25s ease-in-out;
 }
 
 .header > nav > ul > li > a::selection, .header > div > a > img::selection {
-    color: #ffffff;
-    background-color: #1a1a1a;
+    color: #1a1a1a;
+    background-color: #ffffff;
+}
+
+.header > nav > ul > li > a:after {
+    background: none repeat scroll 0 0 transparent;
+    bottom: 0;
+    content: "";
+    display: block;
+    height: 0.15rem;
+    bottom: -50%;
+    opacity: 0;
+    position: absolute;
+    background: #ffffff;
+    transition: opacity 0.3s ease 0s, bottom 0.3s ease 0s;
+    width: 100%;
+}
+
+.header > nav > ul > li > a:hover:after { 
+    opacity: 1;
+    bottom: 0; 
 }
 
 .headerSpace {
-    height: 5rem;
+    height: 6rem;
 }
 
 @media (max-width: 750px) {
@@ -93,8 +121,484 @@ body, body * {
 
 
 
-.works {
+.contentSection {
+    padding-top: 6rem;
+}
 
+.contentSection > div {
+    margin: 0 6rem;
+}
+
+.home {
+    padding-top: 10rem;
+    padding-bottom: 10rem;
+    min-height: calc(100vh - 16rem);
+}
+
+.home > div {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.home > div > section {
+    margin: 0 6rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.home > div > section > img {
+    height: 35rem;
+}
+
+.home > div > section {
+    max-width: 700px;
+}
+
+.home > div > section > h1 {
+    font-size: 4rem;
+}
+
+.home > div > section > p {
+    font-size: 1.4rem;
+    font-weight: 400;
+}
+
+.home > div > section > p > a {
+    text-decoration: none;
+    color: #ff0066;
+}
+
+@media (max-width: 1350px) {
+    .home > div {
+        flex-direction: column-reverse;
+    }
+
+    .home > div > section > img {
+        height: 10rem;
+        margin-bottom: 2rem;
+    }
+
+    .home > div > section > h1 {
+        text-align: center;
+    }
+
+    .home > div > section > p {
+        text-align: center;
+    }
+}
+
+@media (max-width: 800px) {
+    .contentSection {
+        padding-top: 2rem;
+    }
+
+    .home > div > section > h1 {
+        font-size: 2.2rem;
+    }
+}
+
+@media (max-width: 600px) {
+    .contentSection > div {
+        margin: 0;
+    }
+
+    .home > div > section {
+        margin: 0 1.5rem;
+    }
+
+    .home > div > section > h1 {
+        font-size: 2.2rem;
+    }
+}
+
+
+
+.works {
+    padding-bottom: 10rem;
+}
+
+.works > div {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 6rem;
+}
+
+.works > div > section {
+    margin: 0 6rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.worksImage {
+    height: 20rem;
+}
+
+.worksImage > img {
+    height: 100%;
+}
+
+.works > div > section > h2 {
+    font-size: 2.25rem;
+}
+
+.works > div > section > p {
+    font-size: 1.2rem;
+}
+
+.works > div > section > a {
+    margin-top: 1rem;
+    font-size: 1.2rem;
+    font-weight: 800;
+    background-color: #ffffff;
+    color: #1a1a1a;
+    border: none;
+    padding: 0.5rem 1rem;
+    align-self: center;
+    cursor: pointer;
+    transition: background-color .25s ease-in-out, color .25s ease-in-out;
+}
+
+.works > div > section > a:hover {
+    background-color: #ff0066;
+    color: #ffffff;
+}
+
+.worksRight {
+    flex-direction: row;
+}
+
+.worksRight > section {
+    align-items: flex-start;
+}
+
+.worksRight > section > h2, .worksRight > section > p {
+    text-align: left;
+}
+
+.worksRight > section > button {
+    float: left;
+}
+
+.worksLeft {
+    flex-direction: row-reverse;
+}
+
+.worksLeft > section {
+    align-items: flex-end;
+}
+
+.worksLeft > section > h2, .worksLeft > section > p {
+    text-align: right;
+}
+
+.worksLeft > section > button {
+    float: right;
+}
+
+@media (max-width: 1300px) {
+    .works > div {
+        flex-direction: column-reverse;
+        align-items: center;
+    }
+
+    .works > div > section {
+        align-items: center;
+    }
+
+    .works > div > section > h2 {
+        margin-top: 3rem;
+    }
+
+    .works > div > section > h2, .works > div > section > p {
+        text-align: center;
+    }
+}
+
+@media (max-width: 650px) {
+    .worksImage {
+        width: 80vw;
+        height: fit-content;
+    }
+
+    .worksImage > img {
+        width: 80vw;
+        height: auto;
+    }
+}
+
+
+
+.about {
+    padding-top: 0;
+    padding-bottom: 12rem;
+}
+
+.about > div > section {
+    margin: 6rem 6rem 0 6rem;
+}
+
+.about > div > section h1 {
+    font-size: 3rem;
+}
+
+.about > div > section p {
+    font-size: 1.2rem;
+    margin-top: 1rem;
+}
+
+.about > div > section a {
+    text-decoration: none;
+    color: #ff0066;
+}
+
+.aboutSkills > p {
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.aboutSkills > div {
+    display: flex;
+    flex-direction: row;
+    margin: 0 6rem;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.aboutSkills > div > a > img {
+    width: 5rem;
+    margin: 1rem 0;
+}
+
+.aboutResume {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.aboutResume > p {
+    text-align: center;
+    font-size: 1.6rem !important;
+}
+
+.aboutResume > a {
+    margin-top: 1rem;
+    text-align: center;
+    font-size: 1.3rem;
+    font-weight: 800;
+    background-color: #ffffff;
+    color: #1a1a1a !important;
+    padding: 0.5rem 1rem;
+    transition: background-color .25s ease-in-out, color .25s ease-in-out;
+}
+
+.aboutResume > a:hover {
+    background-color: #ff0066;
+    color: #ffffff !important;
+}
+
+.aboutCertificates {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.aboutCertificates > p {
+    text-align: center;
+}
+
+.aboutImages {
+    position: relative;
+    width: 50rem;
+    height: 27rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.aboutImages > img {
+    position: absolute;
+    transform: translate(-50%, -50%);
+    width: 30rem;
+    top: 50%;
+    transition: left 1s ease-in-out;
+}
+
+#aboutImage1 {
+    left: -50%;
+}
+
+#aboutImage2 {
+    left: 50%;
+}
+
+#aboutImage3 {
+    left: 150%;
+}
+
+@media (max-width: 900px) {
+    .aboutSkills > div {
+        margin: 0;
+    }
+
+    .aboutImages {
+        height: 20rem;
+        width: 30rem;
+    }
+
+    .aboutImages > img {
+        width: 20rem;
+    }
+}
+
+@media (max-width: 650px) {
+    .about > div > section {
+        margin: 6rem 3rem 0 3rem;
+    }
+}
+
+@media (max-width: 500px) {
+    .aboutImages {
+        width: 100vw;
+    }
+
+    .aboutImages > img {
+        width: 80%;
+    }
+}
+
+@media (max-width: 450px) {
+    .about > div > section {
+        margin: 6rem 1rem 0 1rem;
+    }
+}
+
+
+
+.contact {
+    padding-bottom: 10rem;
+    text-align: center;
+}
+
+.contact > div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.contact > div > h1 {
+    font-size: 2.5rem;
+}
+
+.contact > div > p {
+    font-size: 1.5rem;
+    margin: 0.5rem 0 1.5rem 0;
+}
+
+.contact > div > a {
+    position: relative;
+    display: inline-block;
+    text-decoration: none;
+    font-size: 1.5rem;
+    margin-top: 0.75rem;
+}
+
+.contact > div > a:after {
+    background: none repeat scroll 0 0 transparent;
+    bottom: 0;
+    content: "";
+    display: block;
+    height: 0.2rem;
+    left: 50%;
+    bottom: -10%;
+    opacity: 0;
+    background: #ffffff;
+    position: absolute;
+    transition: opacity 0.3s ease 0s, width 0.3s ease 0s, left 0.3s ease 0s;
+    width: 0;
+}
+
+.contact > div > a:hover:after { 
+    opacity: 1;
+    width: 100%;
+    left: 0;
+}
+
+#linkDiscord {
+    color: #7289da;
+}
+
+#linkDiscord:after {
+    background: #7289da;
+}
+
+#linkGithub {
+    color: #ffffff;
+}
+
+#linkGithub:after {
+    background: #ffffff;
+}
+
+#linkTwitter {
+    color: #55adee;
+}
+
+#linkTwitter:after {
+    background: #55adee;
+}
+
+#linkReddit {
+    color: #ff4500;
+}
+
+#linkReddit:after {
+    background: #ff4500;
+}
+
+#linkTwitch {
+    color: #6440a5;
+}
+
+#linkTwitch:after {
+    background: #6440a5;
+}
+
+#linkYoutube {
+    color: #ff0000;
+}
+
+#linkYoutube:after {
+    background: #ff0000;
+}
+
+#linkInstagram {
+    color: #e1306c;
+}
+
+#linkInstagram:after {
+    background: #e1306c;
+}
+
+#linkSteam {
+    color: #00ffcc;
+}
+
+#linkSteam:after {
+    background: #00ffcc;
+}
+
+
+
+#homeHeader, #worksHeader, #aboutHeader, #contactHeader {
+    position: absolute;
 }
 
 
