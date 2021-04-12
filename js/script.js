@@ -63,12 +63,14 @@ const imageSlideshow = () => {
     imageOrder[1].style.left = "150%";
     imageOrder[2].style.opacity = 0;
     imageOrder[2].style.left = "-50%";
-    imageOrder[2].src = `assets/certificates/${currentImage}.jpg`
     imageOrder.unshift(imageOrder.pop());
-    ++currentImage;
-    if (currentImage > totalImages) {
-        currentImage = 1;
-    }
+    setTimeout(() => {
+        imageOrder[0].src = `assets/certificates/${currentImage}.jpg`;
+        ++currentImage;
+        if (currentImage > totalImages) {
+            currentImage = 1;
+        }
+    }, 2000);
 };
 
 var interv = setInterval(imageSlideshow, 5000);
