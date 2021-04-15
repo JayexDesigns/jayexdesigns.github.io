@@ -14,6 +14,44 @@ const loadHandle = () => {
     document.getElementById("years").innerText = years();
 }
 
+
+
+var subMenu = document.getElementsByClassName("subMenu")[0];
+var dropped = false;
+document.getElementsByClassName("navWorks")[0].addEventListener('mouseover', () => {
+    subMenu.style.zIndex = 1;
+    subMenu.style.opacity = 1;
+    subMenu.style.top = '100%';
+    dropped = true;
+});
+
+document.getElementsByClassName("navWorks")[0].addEventListener('mouseout', () => {
+    dropped = false;
+    setTimeout(() => {
+        if (dropped === false) {
+            subMenu.style.opacity = 0;
+            subMenu.style.top = '250%';
+            setTimeout(() => {
+                subMenu.style.zIndex = -3;
+            }, 250);
+        }
+    }, 200);
+});
+
+
+
+const assignColor = (param) => {
+    let navItems = [
+        document.getElementsByClassName("navHome")[0].childNodes[0],
+        document.getElementsByClassName("navWorks")[0].childNodes[0],
+        document.getElementsByClassName("navAbout")[0].childNodes[0],
+        document.getElementsByClassName("navContact")[0].childNodes[0]
+    ]
+    for(let i = 0; i < navItems.length; ++i) {
+        (i == param) ? navItems[i].style.color = "#ff0066" : navItems[i].style.color = "#ffffff"
+    }
+};
+
 const scrollHandle = () => {
     let headerHeight = document.getElementsByClassName("header")[0].offsetHeight;
     let homePos = document.getElementsByClassName("home")[0].getBoundingClientRect().top;
@@ -21,28 +59,16 @@ const scrollHandle = () => {
     let aboutPos = document.getElementsByClassName("about")[0].getBoundingClientRect().top;
     let contactPos = document.getElementsByClassName("contact")[0].getBoundingClientRect().top;
     if (contactPos <= headerHeight) {
-        document.getElementsByClassName("navHome")[0].style.color = "#ffffff";
-        document.getElementsByClassName("navWorks")[0].style.color = "#ffffff";
-        document.getElementsByClassName("navAbout")[0].style.color = "#ffffff";
-        document.getElementsByClassName("navContact")[0].style.color = "#ff0066";
+        assignColor(3);
     }
     else if (aboutPos <= headerHeight) {
-        document.getElementsByClassName("navHome")[0].style.color = "#ffffff";
-        document.getElementsByClassName("navWorks")[0].style.color = "#ffffff";
-        document.getElementsByClassName("navAbout")[0].style.color = "#ff0066";
-        document.getElementsByClassName("navContact")[0].style.color = "#ffffff";
+        assignColor(2);
     }
     else if (worksPos <= headerHeight) {
-        document.getElementsByClassName("navHome")[0].style.color = "#ffffff";
-        document.getElementsByClassName("navWorks")[0].style.color = "#ff0066";
-        document.getElementsByClassName("navAbout")[0].style.color = "#ffffff";
-        document.getElementsByClassName("navContact")[0].style.color = "#ffffff";
+        assignColor(1);
     }
     else if (homePos <= headerHeight) {
-        document.getElementsByClassName("navHome")[0].style.color = "#ff0066";
-        document.getElementsByClassName("navWorks")[0].style.color = "#ffffff";
-        document.getElementsByClassName("navAbout")[0].style.color = "#ffffff";
-        document.getElementsByClassName("navContact")[0].style.color = "#ffffff";
+        assignColor(0);
     }
 };
 

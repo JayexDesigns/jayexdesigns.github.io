@@ -81,6 +81,38 @@ h1::selection, h2::selection, p::selection, a::selection {
     bottom: 0; 
 }
 
+.navWorks {
+    position: relative;
+}
+
+.subMenu {
+    display: flex;
+    z-index: -3;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #666666;
+    position: absolute;
+    left: 50%;
+    top: 250%;
+    transform: translate(-50%);
+    margin-top: 0.5rem;
+    width: 7rem;
+    padding: 0.5rem 0;
+    align-self: center;
+    opacity: 0;
+    transition: opacity .25s ease-in-out, top .25s ease-in-out;
+}
+
+.subMenu > li {
+    margin: 0.25rem 0;
+    list-style: none;
+}
+
+.subMenu > li > a {
+    text-decoration: none;
+}
+
 .headerSpace {
     height: 6rem;
 }
