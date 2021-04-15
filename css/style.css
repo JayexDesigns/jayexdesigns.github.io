@@ -623,6 +623,12 @@ h1::selection, h2::selection, p::selection, a::selection {
     background: #00ffcc;
 }
 
+@media (max-width: 300px) {
+    .contact > div > a, .contact > div > p {
+        font-size: 1.2rem;
+    }
+}
+
 
 
 #homeHeader, #worksHeader, #aboutHeader, #contactHeader {
