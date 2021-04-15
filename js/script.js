@@ -19,7 +19,7 @@ const loadHandle = () => {
 var subMenu = document.getElementsByClassName("subMenu")[0];
 var dropped = false;
 document.getElementsByClassName("navWorks")[0].addEventListener('mouseover', () => {
-    subMenu.style.zIndex = 1;
+    subMenu.style.visibility = "visible";
     subMenu.style.opacity = 1;
     subMenu.style.top = '100%';
     dropped = true;
@@ -32,10 +32,10 @@ document.getElementsByClassName("navWorks")[0].addEventListener('mouseout', () =
             subMenu.style.opacity = 0;
             subMenu.style.top = '250%';
             setTimeout(() => {
-                subMenu.style.zIndex = -3;
+                subMenu.style.visibility = "hidden";
             }, 250);
         }
-    }, 200);
+    }, 500);
 });
 
 

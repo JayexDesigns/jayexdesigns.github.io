@@ -64,7 +64,6 @@ h1::selection, h2::selection, p::selection, a::selection {
 
 .header > nav > ul > li > a:after {
     background: none repeat scroll 0 0 transparent;
-    bottom: 0;
     content: "";
     display: block;
     height: 0.15rem;
@@ -87,17 +86,17 @@ h1::selection, h2::selection, p::selection, a::selection {
 
 .subMenu {
     display: flex;
-    z-index: -3;
+    visibility: hidden;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-color: #666666;
+    background-color: #ffffff;
     position: absolute;
     left: 50%;
     top: 250%;
     transform: translate(-50%);
     margin-top: 0.5rem;
-    width: 7rem;
+    width: 10rem;
     padding: 0.5rem 0;
     align-self: center;
     opacity: 0;
@@ -105,12 +104,41 @@ h1::selection, h2::selection, p::selection, a::selection {
 }
 
 .subMenu > li {
-    margin: 0.25rem 0;
+    margin: 0.5rem 0;
     list-style: none;
 }
 
 .subMenu > li > a {
+    position: relative;
+    color: #1a1a1a;
     text-decoration: none;
+    font-size: 1.2rem;
+}
+
+.subMenu > li > a::selection {
+    color: #ffffff;
+    background-color: #1a1a1a;
+}
+
+.subMenu > li > a:after {
+    background: none repeat scroll 0 0 transparent;
+    bottom: 0;
+    content: "";
+    display: block;
+    height: 0.15rem;
+    left: 50%;
+    bottom: -10%;
+    opacity: 0;
+    position: absolute;
+    background: #1a1a1a;
+    transition: opacity 0.3s ease 0s, width 0.3s ease 0s, left 0.3s ease 0s;
+    width: 0;
+}
+
+.subMenu > li > a:hover:after { 
+    opacity: 1;
+    width: 100%;
+    left: 0;
 }
 
 .headerSpace {
