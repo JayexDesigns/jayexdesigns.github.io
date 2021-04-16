@@ -4,6 +4,11 @@ const loadHandle = () => {
     document.getElementById("worksHeader").style.top = `${document.getElementsByClassName("works")[0].offsetTop-headerHeight}px`;
     document.getElementById("aboutHeader").style.top = `${document.getElementsByClassName("about")[0].offsetTop-headerHeight}px`;
     document.getElementById("contactHeader").style.top = `${document.getElementsByClassName("contact")[0].offsetTop-headerHeight}px`;
+    document.getElementById("javascriptSection").style.top = `${document.getElementsByClassName("firstElementJavascript")[0].offsetTop-headerHeight}px`;
+    document.getElementById("pythonSection").style.top = `${document.getElementsByClassName("firstElementPython")[0].offsetTop-headerHeight}px`;
+    document.getElementById("graphicdesignSection").style.top = `${document.getElementsByClassName("firstElementGraphicdesign")[0].offsetTop-headerHeight}px`;
+    document.getElementById("videoeditingSection").style.top = `${document.getElementsByClassName("firstElementVideoediting")[0].offsetTop-headerHeight}px`;
+    document.getElementById("othersSection").style.top = `${document.getElementsByClassName("firstElementOthers")[0].offsetTop-headerHeight}px`;
     scrollHandle();
     let years = () => {
         let timeNow = new Date();
@@ -28,11 +33,13 @@ document.getElementsByClassName("navWorks")[0].addEventListener('mouseover', () 
 document.getElementsByClassName("navWorks")[0].addEventListener('mouseout', () => {
     dropped = false;
     setTimeout(() => {
-        if (dropped === false) {
+        if (!dropped) {
             subMenu.style.opacity = 0;
             subMenu.style.top = '250%';
             setTimeout(() => {
-                subMenu.style.visibility = "hidden";
+                if (!dropped) {
+                    subMenu.style.visibility = "hidden";
+                }
             }, 250);
         }
     }, 500);
@@ -58,16 +65,16 @@ const scrollHandle = () => {
     let worksPos = document.getElementsByClassName("works")[0].getBoundingClientRect().top;
     let aboutPos = document.getElementsByClassName("about")[0].getBoundingClientRect().top;
     let contactPos = document.getElementsByClassName("contact")[0].getBoundingClientRect().top;
-    if (contactPos <= headerHeight) {
+    if (contactPos <= headerHeight + window.innerHeight/2) {
         assignColor(3);
     }
-    else if (aboutPos <= headerHeight) {
+    else if (aboutPos <= headerHeight + window.innerHeight/2) {
         assignColor(2);
     }
-    else if (worksPos <= headerHeight) {
+    else if (worksPos <= headerHeight + window.innerHeight/2) {
         assignColor(1);
     }
-    else if (homePos <= headerHeight) {
+    else if (homePos <= headerHeight + window.innerHeight/2) {
         assignColor(0);
     }
 };

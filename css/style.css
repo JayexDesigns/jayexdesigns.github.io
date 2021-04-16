@@ -691,7 +691,7 @@ h1::selection, h2::selection, p::selection, a::selection {
 
 
 
-#homeHeader, #worksHeader, #aboutHeader, #contactHeader {
+#homeHeader, #worksHeader, #aboutHeader, #contactHeader, #javascriptSection, #pythonSection, #graphicdesignSection, #videoeditingSection, #othersSection {
     position: absolute;
 }
 
