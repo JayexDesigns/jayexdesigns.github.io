@@ -335,7 +335,18 @@ h1::selection, h2::selection, p::selection, a::selection {
     font-size: 1.2rem;
 }
 
-.works > div > section > a {
+.works > div > section > div {
+    align-self: center;
+    display: flex;
+    flex-direction: row;
+}
+
+.works > div > section > div > a {
+    margin-left: 1rem;
+    margin-right: 1rem;
+}
+
+.works > div > section a {
     text-decoration: none;
     margin-top: 1rem;
     font-size: 1.2rem;
@@ -349,7 +360,7 @@ h1::selection, h2::selection, p::selection, a::selection {
     transition: background-color .25s ease-in-out, color .25s ease-in-out;
 }
 
-.works > div > section > a:hover {
+.works > div > section a:hover {
     background-color: #ff0066;
     color: #ffffff;
 }
