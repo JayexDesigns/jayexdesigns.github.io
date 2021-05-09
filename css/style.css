@@ -347,6 +347,7 @@ h1::selection, h2::selection, p::selection, a::selection {
 }
 
 .works > div > section a {
+    white-space: nowrap;
     text-decoration: none;
     margin-top: 1rem;
     font-size: 1.2rem;
