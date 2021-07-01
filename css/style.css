@@ -13,7 +13,7 @@ body, body * {
     color: #ffffff;
 }
 
-h1::selection, h2::selection, p::selection, a::selection {
+h1::selection, h2::selection, p::selection, a::selection, b::selection {
     color: #1a1a1a;
     background-color: #ffffff;
 }

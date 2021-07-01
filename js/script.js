@@ -10,13 +10,14 @@ const loadHandle = () => {
     document.getElementById("videoeditingSection").style.top = `${document.getElementsByClassName("firstElementVideoediting")[0].offsetTop-headerHeight}px`;
     document.getElementById("othersSection").style.top = `${document.getElementsByClassName("firstElementOthers")[0].offsetTop-headerHeight}px`;
     scrollHandle();
+    let timeStart = new Date("04/25/2002");
     let years = () => {
-        let timeNow = new Date();
-        let timeStart = new Date("04/25/2002");
-        let time = new Date(timeNow - timeStart);
-        return Math.abs(time.getUTCFullYear() - 1970);
+        let time = dayjs().diff(dayjs(timeStart.getTime()), 'year', true);
+        return time.toString().substring(0, 11);
     };
-    document.getElementById("years").innerText = years();
+    setInterval(() => {
+        document.getElementById("years").innerText = years();
+    }, 50);
 }
 
 
