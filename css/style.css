@@ -471,6 +471,12 @@ h1::selection, h2::selection, p::selection, a::selection, b::selection {
 .aboutSkills > div > a > img {
     width: 5rem;
     margin: 1rem 0;
+    transform: scale(1);
+    transition: transform .25s ease-in-out;
+}
+
+.aboutSkills > div > a > img:hover {
+    transform: scale(1.3);
 }
 
 .aboutResume {
