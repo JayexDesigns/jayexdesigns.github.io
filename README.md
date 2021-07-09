@@ -5,4 +5,4 @@
 <p>Here you will find a summary of the projects I worked on, details about me and contact information.</p>
 <p>Some of the projects are stored in this github profile's repositories.</p>
 <br/>
-<h2 align="center"><a href="http://jayex.design">VIEW</a></h2>
+<h2 align="center"><a href="https://jayex.design">VIEW</a></h2>
