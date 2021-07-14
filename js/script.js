@@ -10,20 +10,15 @@ const loadHandle = () => {
     document.getElementById("videoeditingSection").style.top = `${document.getElementsByClassName("firstElementVideoediting")[0].offsetTop-headerHeight}px`;
     document.getElementById("othersSection").style.top = `${document.getElementsByClassName("firstElementOthers")[0].offsetTop-headerHeight}px`;
     scrollHandle();
-    let timeStart = new Date("04/25/2002");
-    let years = () => {
-        let time = dayjs().diff(dayjs(timeStart.getTime()), 'year', true);
-        return time.toString().substring(0, 11);
-    };
-    setInterval(() => {
-        document.getElementById("years").innerText = years();
-    }, 50);
 }
+
+
 
 
 
 var subMenu = document.getElementsByClassName("subMenu")[0];
 var dropped = false;
+
 document.getElementsByClassName("navWorks")[0].addEventListener('mouseover', () => {
     subMenu.style.visibility = "visible";
     subMenu.style.opacity = 1;
@@ -48,24 +43,33 @@ document.getElementsByClassName("navWorks")[0].addEventListener('mouseout', () =
 
 
 
+
+
+var navItems = [
+    document.getElementsByClassName("navHome")[0].childNodes[0],
+    document.getElementsByClassName("navWorks")[0].childNodes[0],
+    document.getElementsByClassName("navAbout")[0].childNodes[0],
+    document.getElementsByClassName("navContact")[0].childNodes[0]
+];
+
 const assignColor = (param) => {
-    let navItems = [
-        document.getElementsByClassName("navHome")[0].childNodes[0],
-        document.getElementsByClassName("navWorks")[0].childNodes[0],
-        document.getElementsByClassName("navAbout")[0].childNodes[0],
-        document.getElementsByClassName("navContact")[0].childNodes[0]
-    ]
     for(let i = 0; i < navItems.length; ++i) {
-        (i == param) ? navItems[i].style.color = "#ff0066" : navItems[i].style.color = "#ffffff"
+        (i == param) ? navItems[i].style.color = "#ff0066" : navItems[i].style.color = "#ffffff";
     }
 };
 
+var header = document.getElementsByClassName("header")[0];
+var home = document.getElementsByClassName("home")[0];
+var works = document.getElementsByClassName("works")[0];
+var about = document.getElementsByClassName("about")[0];
+var contact = document.getElementsByClassName("contact")[0];
+
 const scrollHandle = () => {
-    let headerHeight = document.getElementsByClassName("header")[0].offsetHeight;
-    let homePos = document.getElementsByClassName("home")[0].getBoundingClientRect().top;
-    let worksPos = document.getElementsByClassName("works")[0].getBoundingClientRect().top;
-    let aboutPos = document.getElementsByClassName("about")[0].getBoundingClientRect().top;
-    let contactPos = document.getElementsByClassName("contact")[0].getBoundingClientRect().top;
+    let headerHeight = header.offsetHeight;
+    let homePos = home.getBoundingClientRect().top;
+    let worksPos = works.getBoundingClientRect().top;
+    let aboutPos = about.getBoundingClientRect().top;
+    let contactPos = contact.getBoundingClientRect().top;
     if (contactPos <= headerHeight + window.innerHeight/2) {
         assignColor(3);
     }
@@ -81,6 +85,23 @@ const scrollHandle = () => {
 };
 
 window.addEventListener('scroll', scrollHandle);
+
+
+
+
+
+var timeStart = new Date("04/25/2002");
+var years = () => {
+    let time = dayjs().diff(dayjs(timeStart.getTime()), 'year', true);
+    return time.toString().substring(0, 11);
+};
+
+var currentAge = document.getElementById("years");
+setInterval(() => {
+    currentAge.innerText = years();
+}, 50);
+
+
 
 
 
