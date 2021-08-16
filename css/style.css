@@ -300,33 +300,6 @@ h1::selection, h2::selection, p::selection, a::selection, b::selection {
     height: 100%;
 }
 
-.worksImage > div {
-    display: flex;
-    flex-direction: row;
-}
-
-.worksImage > div > img {
-    height: 100%;
-}
-
-@media (max-width: 850px) {
-    .worksImage > div > img {
-        height: 80%;
-    }
-}
-
-@media (max-width: 670px) {
-    .worksImage > div > img {
-        height: 10rem;
-    }
-}
-
-@media (max-width: 400px) {
-    .worksImage > div > img {
-        height: 6rem;
-    }
-}
-
 .works > div > section > h2 {
     font-size: 2.25rem;
 }
