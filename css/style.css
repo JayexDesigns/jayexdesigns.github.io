@@ -688,6 +688,22 @@ h1::selection, h2::selection, p::selection, a::selection, b::selection {
 
 
 
+::-webkit-scrollbar {
+    width: 15px;
+}
+::-webkit-scrollbar-track {
+    background: #1a1a1a;
+}
+::-webkit-scrollbar-thumb {
+    background: #ffffff;
+    transition: .25s;
+}
+::-webkit-scrollbar-thumb:hover {
+    background: #dddddd;
+}
+
+
+
 *:focus {
     outline: none;
 }
