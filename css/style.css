@@ -308,6 +308,11 @@ h1::selection, h2::selection, p::selection, a::selection, b::selection {
     font-size: 1.2rem;
 }
 
+.works > div > section > p > a {
+    text-decoration: none;
+    color: #ff0066;
+}
+
 .works > div > section > div {
     align-self: center;
     display: flex;
@@ -315,11 +320,10 @@ h1::selection, h2::selection, p::selection, a::selection, b::selection {
 }
 
 .works > div > section > div > a {
-    margin-left: 1rem;
-    margin-right: 1rem;
+    margin: 0 1rem;
 }
 
-.works > div > section a {
+.works > div > section > div > a {
     white-space: nowrap;
     text-decoration: none;
     margin-top: 1rem;
@@ -334,7 +338,7 @@ h1::selection, h2::selection, p::selection, a::selection, b::selection {
     transition: background-color .25s ease-in-out, color .25s ease-in-out;
 }
 
-.works > div > section a:hover {
+.works > div > section > div > a:hover {
     background-color: #ff0066;
     color: #ffffff;
 }
