@@ -25,7 +25,8 @@ h1::selection, h2::selection, p::selection, a::selection, b::selection {
     width: calc(100% - 10rem);
     height: 6rem;
     padding: 0 5rem;
-    background-color: #1a1a1a;
+    background-color: #1a1a1aaa;
+    backdrop-filter: blur(0.5rem);
     display: flex;
     flex-direction: row;
     justify-content: space-between;
