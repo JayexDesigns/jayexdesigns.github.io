@@ -109,8 +109,8 @@ var image1 = document.getElementById("aboutImage1");
 var image2 = document.getElementById("aboutImage2");
 var image3 = document.getElementById("aboutImage3");
 var imageOrder = [image1, image2, image3];
-var totalImages = 25;
-var currentImage = 4;
+var totalImages = 26;
+var currentImage = 3;
 
 const imageSlideshow = () => {
     imageOrder[0].style.opacity = 1;
