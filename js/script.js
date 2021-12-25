@@ -109,7 +109,7 @@ var image1 = document.getElementById("aboutImage1");
 var image2 = document.getElementById("aboutImage2");
 var image3 = document.getElementById("aboutImage3");
 var imageOrder = [image1, image2, image3];
-var totalImages = 27;
+var totalImages = 28;
 var currentImage = 3;
 
 const imageSlideshow = () => {
