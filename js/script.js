@@ -4,11 +4,11 @@ const loadHandle = () => {
     document.getElementById("worksHeader").style.top = `${document.getElementsByClassName("works")[0].offsetTop-headerHeight}px`;
     document.getElementById("aboutHeader").style.top = `${document.getElementsByClassName("about")[0].offsetTop-headerHeight}px`;
     document.getElementById("contactHeader").style.top = `${document.getElementsByClassName("contact")[0].offsetTop-headerHeight}px`;
-    document.getElementById("javascriptSection").style.top = `${document.getElementsByClassName("firstElementJavascript")[0].offsetTop-headerHeight}px`;
-    document.getElementById("pythonSection").style.top = `${document.getElementsByClassName("firstElementPython")[0].offsetTop-headerHeight}px`;
-    document.getElementById("graphicdesignSection").style.top = `${document.getElementsByClassName("firstElementGraphicdesign")[0].offsetTop-headerHeight}px`;
-    document.getElementById("videoeditingSection").style.top = `${document.getElementsByClassName("firstElementVideoediting")[0].offsetTop-headerHeight}px`;
-    document.getElementById("othersSection").style.top = `${document.getElementsByClassName("firstElementOthers")[0].offsetTop-headerHeight}px`;
+    document.getElementById("javascriptSection").style.top = `${document.getElementById("javascriptSection").offsetTop-headerHeight}px`;
+    document.getElementById("pythonSection").style.top = `${document.getElementById("pythonSection").offsetTop-headerHeight}px`;
+    document.getElementById("graphicdesignSection").style.top = `${document.getElementById("graphicdesignSection").offsetTop-headerHeight}px`;
+    document.getElementById("videoeditingSection").style.top = `${document.getElementById("videoeditingSection").offsetTop-headerHeight}px`;
+    document.getElementById("othersSection").style.top = `${document.getElementById("othersSection").offsetTop-headerHeight}px`;
     scrollHandle();
 }
 

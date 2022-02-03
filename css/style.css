@@ -184,6 +184,9 @@ h1::selection, h2::selection, p::selection, a::selection, b::selection {
 
 .contentSection {
     padding-top: 6rem;
+    max-width: 2500px;
+    margin: 0 auto;
+
 }
 
 .contentSection > div {
@@ -278,6 +281,19 @@ h1::selection, h2::selection, p::selection, a::selection, b::selection {
 
 .works {
     padding-bottom: 10rem;
+}
+
+.sectionTitle {
+    margin: 10rem 10rem 2rem 10rem;
+    display: block;
+}
+
+.sectionTitle > h3 {
+    font-size: 2rem;
+    font-weight: 700;
+    background-color: #ff0066;
+    padding: 0.5rem 0.75rem;
+    display: inline-block;
 }
 
 .works > div {
@@ -377,6 +393,11 @@ h1::selection, h2::selection, p::selection, a::selection, b::selection {
 }
 
 @media (max-width: 1500px) {
+    .sectionTitle {
+        margin: 10rem 0 2rem 0;
+        text-align: center;
+    }
+
     .works > div {
         flex-direction: column-reverse;
         align-items: center;
@@ -396,6 +417,10 @@ h1::selection, h2::selection, p::selection, a::selection, b::selection {
 }
 
 @media (max-width: 650px) {
+    .works > div > section {
+        margin: 0 2rem;
+    }
+
     .worksImage {
         width: 80vw;
         height: fit-content;
@@ -686,10 +711,6 @@ h1::selection, h2::selection, p::selection, a::selection, b::selection {
 }
 
 
-
-#homeHeader, #worksHeader, #aboutHeader, #contactHeader, #javascriptSection, #pythonSection, #graphicdesignSection, #videoeditingSection, #othersSection {
-    position: absolute;
-}
 
 
 
