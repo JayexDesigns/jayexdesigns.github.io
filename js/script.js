@@ -25,7 +25,7 @@ var navItems = [
 
 const assignColor = (param) => {
     for(let i = 0; i < navItems.length; ++i) {
-        (i == param) ? navItems[i].style.color = "#ff0066" : navItems[i].style.color = "#ffffff";
+        (i == param) ? navItems[i].style.color = "var(--primary-color)" : navItems[i].style.color = "var(--text-color)";
     }
 };
 

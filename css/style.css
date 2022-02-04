@@ -1,21 +1,38 @@
+:root {
+    --background-color: #1a1a1a;
+    --background-color-transparent: #1a1a1aaa;
+    --text-color: #ffffff;
+    --text-color-shade: #dddddd;
+    --primary-color: #ff0066;
+
+    --discord-color: #7289da;
+    --github-color: #ffffff;
+    --twitter-color: #55adee;
+    --reddit-color: #ff4500;
+    --twitch-color: #6440a5;
+    --youtube-color: #ff0000;
+    --instagram-color: #e1306c;
+    --steam-color: #00ffcc;
+}
+
 html {
     scroll-behavior: smooth;
 }
 
 body {
-    background-color: #1a1a1a;
+    background-color: var(--background-color);
     font-family: 'Manrope', sans-serif;
 }
 
 body, body * {
     margin: 0;
     padding: 0;
-    color: #ffffff;
+    color: var(--text-color);
 }
 
 h1::selection, h2::selection, p::selection, a::selection, b::selection {
-    color: #1a1a1a;
-    background-color: #ffffff;
+    color: var(--background-color);
+    background-color: var(--text-color);
 }
 
 
@@ -25,7 +42,7 @@ h1::selection, h2::selection, p::selection, a::selection, b::selection {
     width: calc(100% - 10rem);
     height: 6rem;
     padding: 0 5rem;
-    background-color: #1a1a1aaa;
+    background-color: var(--background-color-transparent);
     backdrop-filter: blur(0.5rem);
     display: flex;
     flex-direction: row;
@@ -63,7 +80,7 @@ h1::selection, h2::selection, p::selection, a::selection, b::selection {
     position: relative;
     display: inline-block;
     text-decoration: none;
-    color: #ffffff;
+    color: var(--text-color);
     font-size: 1.4rem;
     font-weight: 800;
     padding: 0.25rem 0;
@@ -78,7 +95,7 @@ h1::selection, h2::selection, p::selection, a::selection, b::selection {
     bottom: -50%;
     opacity: 0;
     position: absolute;
-    background: #ffffff;
+    background: var(--text-color);
     transition: opacity 0.3s ease 0s, bottom 0.3s ease 0s;
     width: 100%;
 }
@@ -93,7 +110,7 @@ h1::selection, h2::selection, p::selection, a::selection, b::selection {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-color: #ffffff;
+    background-color: var(--text-color);
     position: absolute;
     left: 50%;
     top: 80%;
@@ -114,14 +131,14 @@ h1::selection, h2::selection, p::selection, a::selection, b::selection {
 
 .subMenu > li > a {
     position: relative;
-    color: #1a1a1a;
+    color: var(--background-color);
     text-decoration: none;
     font-size: 1.2rem;
 }
 
 .subMenu > li > a::selection {
-    color: #ffffff;
-    background-color: #1a1a1a;
+    color: var(--text-color);
+    background-color: var(--background-color);
 }
 
 .subMenu > li > a:after {
@@ -134,7 +151,7 @@ h1::selection, h2::selection, p::selection, a::selection, b::selection {
     bottom: -10%;
     opacity: 0;
     position: absolute;
-    background: #1a1a1a;
+    background: var(--background-color);
     transition: opacity 0.3s ease 0s, width 0.3s ease 0s, left 0.3s ease 0s;
     width: 0;
 }
@@ -234,7 +251,7 @@ h1::selection, h2::selection, p::selection, a::selection, b::selection {
 
 .home > div > section > p > a {
     text-decoration: none;
-    color: #ff0066;
+    color: var(--primary-color);
 }
 
 @media (max-width: 1350px) {
@@ -294,7 +311,8 @@ h1::selection, h2::selection, p::selection, a::selection, b::selection {
 .sectionTitle > h3 {
     font-size: 2rem;
     font-weight: 700;
-    background-color: #ff0066;
+    background-color: var(--primary-color);
+    color: var(--text-color);
     padding: 0.5rem 0.75rem;
     display: inline-block;
 }
@@ -330,7 +348,7 @@ h1::selection, h2::selection, p::selection, a::selection, b::selection {
 
 .works > div > section > p > a {
     text-decoration: none;
-    color: #ff0066;
+    color: var(--primary-color);
 }
 
 .works > div > section > div {
@@ -349,8 +367,8 @@ h1::selection, h2::selection, p::selection, a::selection, b::selection {
     margin-top: 1rem;
     font-size: 1.2rem;
     font-weight: 800;
-    background-color: #ffffff;
-    color: #1a1a1a;
+    background-color: var(--text-color);
+    color: var(--background-color);
     border: none;
     padding: 0.5rem 1rem;
     align-self: center;
@@ -359,8 +377,8 @@ h1::selection, h2::selection, p::selection, a::selection, b::selection {
 }
 
 .works > div > section > div > a:hover {
-    background-color: #ff0066;
-    color: #ffffff;
+    background-color: var(--primary-color);
+    color: var(--text-color);
 }
 
 .worksRight {
@@ -457,7 +475,7 @@ h1::selection, h2::selection, p::selection, a::selection, b::selection {
 
 .about > div > section a {
     text-decoration: none;
-    color: #ff0066;
+    color: var(--primary-color);
 }
 
 .aboutSkills > p {
@@ -501,15 +519,15 @@ h1::selection, h2::selection, p::selection, a::selection, b::selection {
     text-align: center;
     font-size: 1.3rem;
     font-weight: 800;
-    background-color: #ffffff;
-    color: #1a1a1a !important;
+    background-color: var(--text-color);
+    color: var(--background-color) !important;
     padding: 0.5rem 1rem;
     transition: background-color .25s ease-in-out, color .25s ease-in-out;
 }
 
 .aboutResume > a:hover {
-    background-color: #ff0066;
-    color: #ffffff !important;
+    background-color: var(--primary-color);
+    color: var(--text-color) !important;
 }
 
 .aboutCertificates {
@@ -631,7 +649,7 @@ h1::selection, h2::selection, p::selection, a::selection, b::selection {
     left: 50%;
     bottom: -10%;
     opacity: 0;
-    background: #ffffff;
+    background: var(--text-color);
     position: absolute;
     transition: opacity 0.3s ease 0s, width 0.3s ease 0s, left 0.3s ease 0s;
     width: 0;
@@ -644,67 +662,67 @@ h1::selection, h2::selection, p::selection, a::selection, b::selection {
 }
 
 #linkDiscord {
-    color: #7289da;
+    color: var(--discord-color);
 }
 
 #linkDiscord:after {
-    background: #7289da;
+    background: var(--discord-color);
 }
 
 #linkGithub {
-    color: #ffffff;
+    color: var(--github-color);
 }
 
 #linkGithub:after {
-    background: #ffffff;
+    background: var(--github-color);
 }
 
 #linkTwitter {
-    color: #55adee;
+    color: var(--twitter-color);
 }
 
 #linkTwitter:after {
-    background: #55adee;
+    background: var(--twitter-color);
 }
 
 #linkReddit {
-    color: #ff4500;
+    color: var(--reddit-color);
 }
 
 #linkReddit:after {
-    background: #ff4500;
+    background: var(--reddit-color);
 }
 
 #linkTwitch {
-    color: #6440a5;
+    color: var(--twitch-color);
 }
 
 #linkTwitch:after {
-    background: #6440a5;
+    background: var(--twitch-color);
 }
 
 #linkYoutube {
-    color: #ff0000;
+    color: var(--youtube-color);
 }
 
 #linkYoutube:after {
-    background: #ff0000;
+    background: var(--youtube-color);
 }
 
 #linkInstagram {
-    color: #e1306c;
+    color: var(--instagram-color);
 }
 
 #linkInstagram:after {
-    background: #e1306c;
+    background: var(--instagram-color);
 }
 
 #linkSteam {
-    color: #00ffcc;
+    color: var(--steam-color);
 }
 
 #linkSteam:after {
-    background: #00ffcc;
+    background: var(--steam-color);
 }
 
 @media (max-width: 300px) {
@@ -721,14 +739,14 @@ h1::selection, h2::selection, p::selection, a::selection, b::selection {
     width: 15px;
 }
 ::-webkit-scrollbar-track {
-    background: #1a1a1a;
+    background: var(--background-color);
 }
 ::-webkit-scrollbar-thumb {
-    background: #ffffff;
+    background: var(--text-color);
     transition: .25s;
 }
 ::-webkit-scrollbar-thumb:hover {
-    background: #dddddd;
+    background: var(--text-color-shade);
 }
 
 
