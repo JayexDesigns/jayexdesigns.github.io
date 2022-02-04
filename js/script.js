@@ -16,35 +16,6 @@ const loadHandle = () => {
 
 
 
-var subMenu = document.getElementsByClassName("subMenu")[0];
-var dropped = false;
-
-document.getElementsByClassName("navWorks")[0].addEventListener('mouseover', () => {
-    subMenu.style.visibility = "visible";
-    subMenu.style.opacity = 1;
-    subMenu.style.top = '100%';
-    dropped = true;
-});
-
-document.getElementsByClassName("navWorks")[0].addEventListener('mouseout', () => {
-    dropped = false;
-    setTimeout(() => {
-        if (!dropped) {
-            subMenu.style.opacity = 0;
-            subMenu.style.top = '250%';
-            setTimeout(() => {
-                if (!dropped) {
-                    subMenu.style.visibility = "hidden";
-                }
-            }, 250);
-        }
-    }, 500);
-});
-
-
-
-
-
 var navItems = [
     document.getElementsByClassName("navHome")[0].childNodes[0],
     document.getElementsByClassName("navWorks")[0].childNodes[0],

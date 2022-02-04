@@ -48,8 +48,15 @@ h1::selection, h2::selection, p::selection, a::selection, b::selection {
 }
 
 .header > nav > ul > li {
+    position: relative;
     list-style: none;
     margin-left: 3rem;
+}
+
+.header > nav > ul > li:hover ul {
+    opacity: 1;
+    pointer-events: all;
+    top: 100%;
 }
 
 .header > nav > ul > li > a {
@@ -81,26 +88,22 @@ h1::selection, h2::selection, p::selection, a::selection, b::selection {
     bottom: 0; 
 }
 
-.navWorks {
-    position: relative;
-}
-
 .subMenu {
     display: flex;
-    visibility: hidden;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     background-color: #ffffff;
     position: absolute;
     left: 50%;
-    top: 250%;
+    top: 80%;
     transform: translate(-50%);
-    margin-top: 0.5rem;
+    margin-top: 0.15rem;
     width: 10rem;
     padding: 0.5rem 0;
     align-self: center;
     opacity: 0;
+    pointer-events: none;
     transition: opacity .25s ease-in-out, top .25s ease-in-out;
 }
 
