@@ -30,7 +30,7 @@ body, body * {
     color: var(--text-color);
 }
 
-h1::selection, h2::selection, p::selection, a::selection, b::selection {
+body *::selection {
     color: var(--background-color);
     background-color: var(--text-color);
 }
