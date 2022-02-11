@@ -206,7 +206,6 @@ h1::selection, h2::selection, p::selection, a::selection, b::selection {
     padding-top: 6rem;
     max-width: 2500px;
     margin: 0 auto;
-
 }
 
 .contentSection > div {
@@ -216,7 +215,8 @@ h1::selection, h2::selection, p::selection, a::selection, b::selection {
 .home {
     padding-top: 10rem;
     padding-bottom: 10rem;
-    min-height: calc(100vh - 16rem);
+    height: calc(100vh - 16rem);
+    max-height: 100rem;
 }
 
 .home > div {
