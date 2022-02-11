@@ -36,6 +36,7 @@
         gtag('config', 'G-2XL14VJ1PH');
     </script>
 
+    <script defer src="https://unpkg.com/scrollreveal@4.0.0/dist/scrollreveal.min.js"></script>
     <script defer src="https://unpkg.com/dayjs@1.8.21/dayjs.min.js"></script>
     <script defer src="js/script.js"></script>
 </head>
@@ -69,7 +70,7 @@
     <div id="homeHeader"></div>
     <div class="home contentSection">
         <div>
-            <section>
+            <section class="homeText">
                 <h1>Hi, I'm Jayex Designs</h1>
                 <br>
                 <p>I'm a full stack developer and graphic designer</p>
@@ -77,7 +78,7 @@
                 <p>This is my portfolio where you will be able to find <a href="#worksHeader">my projects</a>, details <a href="#aboutHeader">about me</a> and <a href="#contactHeader">contact information</a></p>
             </section>
             <section>
-                <img src="assets/img/whiteLogo.png" alt="Somathing Went Wrong">
+                <img class="homeLogo" src="assets/img/whiteLogo.png" alt="Somathing Went Wrong">
             </section>
         </div>
     </div>
@@ -90,7 +91,7 @@
         <span class="sectionTitle">
             <h3>JavaScript</h3>
         </span>
-        <div class="worksLeft">
+        <div class="workElement worksLeft">
             <section>
                 <h2>Solar System Web Simulation</h2>
                 <br>
@@ -110,7 +111,7 @@
             </section>
         </div>
 
-        <div class="worksRight">
+        <div class="workElement worksRight">
             <section>
                 <h2>Socket Chat</h2>
                 <br>
@@ -129,7 +130,7 @@
             </section>
         </div>
 
-        <div class="worksLeft">
+        <div class="workElement worksLeft">
             <section>
                 <h2>Twitch Subathon Countdown</h2>
                 <br>
@@ -148,7 +149,7 @@
             </section>
         </div>
 
-        <div class="worksRight">
+        <div class="workElement worksRight">
             <section>
                 <h2>A* Algorithm Visualizer</h2>
                 <br>
@@ -168,7 +169,7 @@
             </section>
         </div>
 
-        <div class="worksLeft">
+        <div class="workElement worksLeft">
             <section>
                 <h2>Logic Gates Simulator</h2>
                 <br>
@@ -188,7 +189,7 @@
             </section>
         </div>
 
-        <div class="worksRight">
+        <div class="workElement worksRight">
             <section>
                 <h2>Deepath</h2>
                 <br>
@@ -207,7 +208,7 @@
             </section>
         </div>
 
-        <div class="worksLeft">
+        <div class="workElement worksLeft">
             <section>
                 <h2>Particles Background</h2>
                 <br>
@@ -228,7 +229,7 @@
             </section>
         </div>
 
-        <div class="worksRight">
+        <div class="workElement worksRight">
             <section>
                 <h2>Terminal Wallpaper</h2>
                 <br>
@@ -249,7 +250,7 @@
             </section>
         </div>
 
-        <div class="worksLeft">
+        <div class="workElement worksLeft">
             <section>
                 <h2>Sorting Algorithm Visualizer</h2>
                 <br>
@@ -273,7 +274,7 @@
         <span class="sectionTitle">
             <h3>Python</h3>
         </span>
-        <div class="worksRight">
+        <div class="workElement worksRight">
             <section>
                 <h2>Free Games Notifier</h2>
                 <br>
@@ -292,7 +293,7 @@
             </section>
         </div>
 
-        <div class="worksLeft">
+        <div class="workElement worksLeft">
             <section>
                 <h2>Discord Bots</h2>
                 <br>
@@ -311,7 +312,7 @@
             </section>
         </div>
 
-        <div class="worksRight">
+        <div class="workElement worksRight">
             <section>
                 <h2>Twitch API</h2>
                 <br>
@@ -330,7 +331,7 @@
             </section>
         </div>
 
-        <div class="worksLeft">
+        <div class="workElement worksLeft">
             <section>
                 <h2>SQL Injection Simulator</h2>
                 <br>
@@ -353,7 +354,7 @@
         <span class="sectionTitle">
             <h3>Graphic Design</h3>
         </span>
-        <div class="worksRight">
+        <div class="workElement worksRight">
             <section>
                 <h2>Jayex Designs Brand</h2>
                 <br>
@@ -372,7 +373,7 @@
             </section>
         </div>
 
-        <div class="worksLeft">
+        <div class="workElement worksLeft">
             <section>
                 <h2>Steelseries Headband Contest</h2>
                 <br>
@@ -391,7 +392,7 @@
             </section>
         </div>
 
-        <div class="worksRight">
+        <div class="workElement worksRight">
             <section>
                 <h2>Espai Kairos</h2>
                 <br>
@@ -414,7 +415,7 @@
         <span class="sectionTitle">
             <h3>Video Editing</h3>
         </span>
-        <div class="worksLeft">
+        <div class="workElement worksLeft">
             <section>
                 <h2>Ethieen Animations</h2>
                 <br>
@@ -433,7 +434,7 @@
             </section>
         </div>
 
-        <div class="worksRight">
+        <div class="workElement worksRight">
             <section>
                 <h2>Audio Visualizers</h2>
                 <br>
@@ -452,7 +453,7 @@
         <span class="sectionTitle">
             <h3>Others</h3>
         </span>
-        <div class="worksLeft">
+        <div class="workElement worksLeft">
             <section>
                 <h2>CC: Tweaked Potato Amazon</h2>
                 <br>
@@ -477,7 +478,7 @@
     <div id="aboutHeader"></div>
     <div class="about contentSection">
         <div>
-            <section>
+            <section class="aboutText">
                 <h1>About Me</h1>
                 <p>I'm <b id="years"></b> years old, my real name is Joaquín Tourón and I mainly dedicate myself to full stack programming, I also do data science projects, scripting, artificial intelligence...</p>
                 <p>Outside of programming I also dedicate myself to graphic design, video editing and photography.</p>
@@ -490,31 +491,31 @@
             <section class="aboutSkills">
                 <p>These are my programming skills:</p>
                 <div>
-                    <a href="https://python.org/" target="_blank"><img src="assets/skills/Python BW.png" alt="Something Went Wrong"></a>
-                    <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank"><img src="assets/skills/Javascript BW.png" alt="Something Went Wrong"></a>
-                    <a href="https://www.typescriptlang.org/" target="_blank"><img src="assets/skills/Typescript BW.png" alt="Something Went Wrong"></a>
-                    <a href="https://nodejs.org" target="_blank"><img src="assets/skills/Node Js BW.png" alt="Something Went Wrong"></a>
-                    <a href="https://developer.mozilla.org/en-US/docs/Web/HTML" target="_blank"><img src="assets/skills/HTML BW.png" alt="Something Went Wrong"></a>
-                    <a href="https://developer.mozilla.org/en-US/docs/Web/CSS" target="_blank"><img src="assets/skills/CSS BW.png" alt="Something Went Wrong"></a>
-                    <a href="https://dart.dev/" target="_blank"><img src="assets/skills/Dart BW.png" alt="Something Went Wrong"></a>
-                    <a href="https://flutter.dev/" target="_blank"><img src="assets/skills/Flutter BW.png" alt="Something Went Wrong"></a>
-                    <a href="https://en.wikipedia.org/wiki/C_(programming_language)" target="_blank"><img src="assets/skills/C BW.png" alt="Something Went Wrong"></a>
-                    <a href="https://en.wikipedia.org/wiki/C%2B%2B" target="_blank"><img src="assets/skills/C++ BW.png" alt="Something Went Wrong"></a>
-                    <a href="https://docs.microsoft.com/es-es/dotnet/csharp/" target="_blank"><img src="assets/skills/CSharp BW.png" alt="Something Went Wrong"></a>
-                    <a href="https://golang.org/" target="_blank"><img src="assets/skills/GoLang BW.png" alt="Something Went Wrong"></a>
-                    <a href="https://lua.org/" target="_blank"><img src="assets/skills/Lua BW.png" alt="Something Went Wrong"></a>
-                    <a href="https://en.wikipedia.org/wiki/SQL" target="_blank"><img src="assets/skills/SQL BW.png" alt="Something Went Wrong"></a>
-                    <a href="https://mongodb.com/" target="_blank"><img src="assets/skills/MongoDB BW.png" alt="Something Went Wrong"></a>
-                    <a href="https://reactjs.org/" target="_blank"><img src="assets/skills/React BW.png" alt="Something Went Wrong"></a>
-                    <a href="https://redux.js.org/" target="_blank"><img src="assets/skills/Redux BW.png" alt="Something Went Wrong"></a>
-                    <a href="https://material-ui.com/" target="_blank"><img src="assets/skills/MaterialUI BW.png" alt="Something Went Wrong"></a>
-                    <a href="https://electronjs.org/" target="_blank"><img src="assets/skills/Electron BW.png" alt="Something Went Wrong"></a>
-                    <a href="https://threejs.org" target="_blank"><img src="assets/skills/Three Js BW.png" alt="Something Went Wrong"></a>
-                    <a href="https://jquery.com/" target="_blank"><img src="assets/skills/JQuery BW.png" alt="Something Went Wrong"></a>
-                    <a href="https://d3js.org/" target="_blank"><img src="assets/skills/D3 BW.png" alt="Something Went Wrong"></a>
-                    <a href="https://getbootstrap.com" target="_blank"><img src="assets/skills/Bootstrap BW.png" alt="Something Went Wrong"></a>
-                    <a href="https://en.wikipedia.org/wiki/Bash_(Unix_shell)" target="_blank"><img src="assets/skills/Bash BW.png" alt="Something Went Wrong"></a>
-                    <a href="https://raspberrypi.org/" target="_blank"><img src="assets/skills/Raspberry Pi BW.png" alt="Something Went Wrong"></a>
+                    <a class="aboutSkill" href="https://python.org/" target="_blank"><img src="assets/skills/Python BW.png" alt="Something Went Wrong"></a>
+                    <a class="aboutSkill" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank"><img src="assets/skills/Javascript BW.png" alt="Something Went Wrong"></a>
+                    <a class="aboutSkill" href="https://www.typescriptlang.org/" target="_blank"><img src="assets/skills/Typescript BW.png" alt="Something Went Wrong"></a>
+                    <a class="aboutSkill" href="https://nodejs.org" target="_blank"><img src="assets/skills/Node Js BW.png" alt="Something Went Wrong"></a>
+                    <a class="aboutSkill" href="https://developer.mozilla.org/en-US/docs/Web/HTML" target="_blank"><img src="assets/skills/HTML BW.png" alt="Something Went Wrong"></a>
+                    <a class="aboutSkill" href="https://developer.mozilla.org/en-US/docs/Web/CSS" target="_blank"><img src="assets/skills/CSS BW.png" alt="Something Went Wrong"></a>
+                    <a class="aboutSkill" href="https://dart.dev/" target="_blank"><img src="assets/skills/Dart BW.png" alt="Something Went Wrong"></a>
+                    <a class="aboutSkill" href="https://flutter.dev/" target="_blank"><img src="assets/skills/Flutter BW.png" alt="Something Went Wrong"></a>
+                    <a class="aboutSkill" href="https://en.wikipedia.org/wiki/C_(programming_language)" target="_blank"><img src="assets/skills/C BW.png" alt="Something Went Wrong"></a>
+                    <a class="aboutSkill" href="https://en.wikipedia.org/wiki/C%2B%2B" target="_blank"><img src="assets/skills/C++ BW.png" alt="Something Went Wrong"></a>
+                    <a class="aboutSkill" href="https://docs.microsoft.com/es-es/dotnet/csharp/" target="_blank"><img src="assets/skills/CSharp BW.png" alt="Something Went Wrong"></a>
+                    <a class="aboutSkill" href="https://golang.org/" target="_blank"><img src="assets/skills/GoLang BW.png" alt="Something Went Wrong"></a>
+                    <a class="aboutSkill" href="https://lua.org/" target="_blank"><img src="assets/skills/Lua BW.png" alt="Something Went Wrong"></a>
+                    <a class="aboutSkill" href="https://en.wikipedia.org/wiki/SQL" target="_blank"><img src="assets/skills/SQL BW.png" alt="Something Went Wrong"></a>
+                    <a class="aboutSkill" href="https://mongodb.com/" target="_blank"><img src="assets/skills/MongoDB BW.png" alt="Something Went Wrong"></a>
+                    <a class="aboutSkill" href="https://reactjs.org/" target="_blank"><img src="assets/skills/React BW.png" alt="Something Went Wrong"></a>
+                    <a class="aboutSkill" href="https://redux.js.org/" target="_blank"><img src="assets/skills/Redux BW.png" alt="Something Went Wrong"></a>
+                    <a class="aboutSkill" href="https://material-ui.com/" target="_blank"><img src="assets/skills/MaterialUI BW.png" alt="Something Went Wrong"></a>
+                    <a class="aboutSkill" href="https://electronjs.org/" target="_blank"><img src="assets/skills/Electron BW.png" alt="Something Went Wrong"></a>
+                    <a class="aboutSkill" href="https://threejs.org" target="_blank"><img src="assets/skills/Three Js BW.png" alt="Something Went Wrong"></a>
+                    <a class="aboutSkill" href="https://jquery.com/" target="_blank"><img src="assets/skills/JQuery BW.png" alt="Something Went Wrong"></a>
+                    <a class="aboutSkill" href="https://d3js.org/" target="_blank"><img src="assets/skills/D3 BW.png" alt="Something Went Wrong"></a>
+                    <a class="aboutSkill" href="https://getbootstrap.com" target="_blank"><img src="assets/skills/Bootstrap BW.png" alt="Something Went Wrong"></a>
+                    <a class="aboutSkill" href="https://en.wikipedia.org/wiki/Bash_(Unix_shell)" target="_blank"><img src="assets/skills/Bash BW.png" alt="Something Went Wrong"></a>
+                    <a class="aboutSkill" href="https://raspberrypi.org/" target="_blank"><img src="assets/skills/Raspberry Pi BW.png" alt="Something Went Wrong"></a>
                 </div>
             </section>
             <section class="aboutResume">
@@ -540,17 +541,17 @@
         <div>
             <h1>Contact</h1>
             <p>You can find me on the following social media:</p>
-            <a href="https://discordapp.com/users/286817063878656012" target="_blank" id="linkDiscord">Discord</a>
-            <a href="https://github.com/JayexDesigns" target="_blank" id="linkGithub">Github</a>
-            <a href="https://twitter.com/Jayex_Designs" target="_blank" id="linkTwitter">Twitter</a>
-            <a href="https://reddit.com/user/JayexDesigns/" target="_blank" id="linkReddit">Reddit</a>
-            <a href="https://twitch.tv/jayex_designs" target="_blank" id="linkTwitch">Twitch</a>
-            <a href="https://youtube.com/user/joaquintouron" target="_blank" id="linkYoutube">Youtube</a>
-            <a href="https://instagram.com/jayex_photo/" target="_blank" id="linkInstagram">Instagram</a>
-            <a href="https://steamcommunity.com/id/jayexdesigns" target="_blank" id="linkSteam">Steam</a>
+            <a class="contactLink" href="https://discordapp.com/users/286817063878656012" target="_blank" id="linkDiscord">Discord</a>
+            <a class="contactLink" href="https://github.com/JayexDesigns" target="_blank" id="linkGithub">Github</a>
+            <a class="contactLink" href="https://twitter.com/Jayex_Designs" target="_blank" id="linkTwitter">Twitter</a>
+            <a class="contactLink" href="https://reddit.com/user/JayexDesigns/" target="_blank" id="linkReddit">Reddit</a>
+            <a class="contactLink" href="https://twitch.tv/jayex_designs" target="_blank" id="linkTwitch">Twitch</a>
+            <a class="contactLink" href="https://youtube.com/user/joaquintouron" target="_blank" id="linkYoutube">Youtube</a>
+            <a class="contactLink" href="https://instagram.com/jayex_photo/" target="_blank" id="linkInstagram">Instagram</a>
+            <a class="contactLink" href="https://steamcommunity.com/id/jayexdesigns" target="_blank" id="linkSteam">Steam</a>
             <br><br>
             <p>Or you can contact me by email:</p>
-            <a href="mailto:joaquintouron@gmail.com">joaquintouron@gmail.com</a>
+            <a class="contactLink" href="mailto:joaquintouron@gmail.com">joaquintouron@gmail.com</a>
         </div>
     </div>
 </body>

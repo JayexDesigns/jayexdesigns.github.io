@@ -1,3 +1,4 @@
+// Change Heights When Page Is Loaded
 const loadHandle = () => {
     let headerHeight = document.getElementsByClassName("header")[0].offsetHeight;
     document.getElementById("homeHeader").style.top = `${-headerHeight}px`;
@@ -16,6 +17,7 @@ const loadHandle = () => {
 
 
 
+// Change Colors Of Header Depending On Section
 var navItems = [
     document.getElementsByClassName("navHome")[0].childNodes[0],
     document.getElementsByClassName("navWorks")[0].childNodes[0],
@@ -61,6 +63,7 @@ window.addEventListener('scroll', scrollHandle);
 
 
 
+// Day Js
 var timeStart = new Date("04/25/2002");
 var years = () => {
     let time = dayjs().diff(dayjs(timeStart.getTime()), 'year', true);
@@ -76,6 +79,7 @@ setInterval(() => {
 
 
 
+// Certificates Showcase
 var image1 = document.getElementById("aboutImage1");
 var image2 = document.getElementById("aboutImage2");
 var image3 = document.getElementById("aboutImage3");
@@ -100,3 +104,75 @@ const imageSlideshow = () => {
 };
 
 var interv = setInterval(imageSlideshow, 5000);
+
+
+
+
+
+// Scroll Reveal
+window.sr = ScrollReveal();
+
+sr.reveal('.header', {
+    duration: 500,
+    origin: 'top',
+    distance: '3rem',
+});
+
+sr.reveal('.homeText', {
+    duration: 1000,
+    origin: 'left',
+    distance: '5rem',
+});
+
+sr.reveal('.homeLogo', {
+    duration: 1000,
+    origin: 'right',
+    distance: '5rem',
+});
+
+sr.reveal('.sectionTitle', {
+    duration: 500,
+    origin: 'top',
+    distance: '3rem',
+});
+
+sr.reveal('.workElement', {
+    duration: 1000,
+    origin: 'bottom',
+    distance: '5rem',
+});
+
+sr.reveal('.aboutText', {
+    duration: 1000,
+    origin: 'left',
+    distance: '5rem',
+});
+
+sr.reveal('.aboutSkill', {
+    duration: 500,
+    scale: 0.8,
+});
+
+sr.reveal('.aboutResume', {
+    duration: 500,
+    origin: 'bottom',
+    distance: '5rem',
+});
+
+sr.reveal('.aboutCertificates', {
+    duration: 500,
+    origin: 'bottom',
+    distance: '5rem',
+});
+
+sr.reveal('.contentSection', {
+    duration: 1000,
+    origin: 'bottom',
+    distance: '5rem',
+});
+
+sr.reveal('.contactLink', {
+    duration: 1000,
+    origin: 'left',
+    distance: '5rem',
+});
