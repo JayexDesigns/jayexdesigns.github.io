@@ -5,6 +5,25 @@
     --text-color-shade: #dddddd;
     --primary-color: #ff0066;
 
+    --about-folder-width: 6em;
+	--about-folder-height: calc(0.8 * var(--about-folder-width));
+	--about-folder-cover-height: calc(0.7 * var(--about-folder-width));
+	--about-folder-slip-height: calc(var(--about-folder-height) - var(--about-folder-cover-height));
+	--about-folder-title-size: calc(0.16 * var(--about-folder-width));
+	--about-thumb-width: calc(0.7 * var(--about-folder-width));
+    --about-folder-color-1: #ff0066;
+    --about-folder-color-1-dark: #b10047;
+    --about-folder-color-5: #00ffcc;
+    --about-folder-color-5-dark: #00a7b3;
+    --about-folder-color-3: #00ccff;
+    --about-folder-color-3-dark: #006dd4;
+    --about-folder-color-4: #8c00ff;
+    --about-folder-color-4-dark: #3e00b1;
+    --about-folder-color-2: #ffbb00;
+    --about-folder-color-2-dark: #b17900;
+    --about-folder-color-6: #ff3535;
+    --about-folder-color-6-dark: #b10000;
+
     --discord-color: #7289da;
     --github-color: #ffffff;
     --twitter-color: #55adee;
@@ -541,7 +560,162 @@ body *::selection {
     text-align: center;
 }
 
-.aboutImages {
+.aboutFolderContainer {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	justify-content: center;
+}
+
+.aboutFolder {
+	position: relative;
+	width: var(--about-folder-width);
+    margin: 6rem 3.5rem 0 3.5rem;
+}
+.aboutFolder:hover .aboutFolderIconImg {
+    transform: scale(1.1);
+}
+
+/* .aboutFolderFeedback {
+	position: absolute;
+	width: var(--about-thumb-width);
+	height: var(--about-thumb-width);
+	border-radius: 50%;
+	top: 50%;
+	left: 50%;
+	margin: calc(var(--about-thumb-width) / -1.3 + var(--about-folder-slip-height) / 2) 0 0 calc(var(--about-thumb-width) / -2);
+	pointer-events: none;
+	opacity: 0;
+} */
+
+.aboutFolderIcon {
+	position: relative;
+	width: 100%;
+	height: var(--about-folder-height);
+	cursor: pointer;
+}
+
+.aboutFolderIconImg {
+	backface-visibility: hidden;
+	transform-origin: 50% 100%;
+    transition: .1s ease-in-out;
+}
+
+.aboutFolderIconImg,
+.aboutFolderIconSvg {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+
+.aboutFolderIconSvgDeco {
+    width: calc(var(--about-folder-width)*0.35);
+	top: 50%;
+	left: 50%;
+    transform: translate(-50%, -50%);
+    margin-top: calc(var(--about-folder-width)*0.05);
+}
+
+.aboutFolderPreview {
+    pointer-events: none;
+	position: absolute;
+}
+
+.aboutFolderPreviewThumbs {
+	width: var(--about-thumb-width);
+	height: var(--about-thumb-width);
+	top: calc((var(--about-folder-height) + var(--about-folder-slip-height)) / 2 - var(--about-thumb-width) / 2);
+	left: calc(var(--about-folder-width) / 2 - var(--about-thumb-width) / 2);
+}
+
+.aboutFolderThumb {
+	width: 100%;
+	display: block;
+	position: absolute;
+	opacity: 0;
+    z-index: 10;
+}
+
+.aboutFolderThumb img {
+	max-width: 100%;
+	display: block;
+	position: absolute;
+    z-index: 10;
+}
+
+.aboutFolderTitle {
+	position: relative;
+	display: inline-block;
+	line-height: 1.15;
+	margin: 0.75em 0 0;
+	font-size: var(--about-folder-title-size);
+    color: var(--text-color);
+}
+
+.aboutFolder1 .aboutFolderIconSvgCover path {
+    color: var(--about-folder-color-1);
+    fill: var(--about-folder-color-1);
+}
+.aboutFolder1 .aboutFolderFeedback,
+.aboutFolder1 .aboutFolderIconSvgDeco path,
+.aboutFolder1 .aboutFolderIconImgBack path {
+    color: var(--about-folder-color-1-dark);
+    fill: var(--about-folder-color-1-dark);
+}
+.aboutFolder2 .aboutFolderIconSvgCover path {
+    color: var(--about-folder-color-2);
+    fill: var(--about-folder-color-2);
+}
+.aboutFolder2 .aboutFolderFeedback,
+.aboutFolder2 .aboutFolderIconSvgDeco path,
+.aboutFolder2 .aboutFolderIconImgBack path {
+    color: var(--about-folder-color-2-dark);
+    fill: var(--about-folder-color-2-dark);
+}
+.aboutFolder3 .aboutFolderIconSvgCover path {
+    color: var(--about-folder-color-3);
+    fill: var(--about-folder-color-3);
+}
+.aboutFolder3 .aboutFolderFeedback,
+.aboutFolder3 .aboutFolderIconSvgDeco path,
+.aboutFolder3 .aboutFolderIconImgBack path {
+    color: var(--about-folder-color-3-dark);
+    fill: var(--about-folder-color-3-dark);
+}
+.aboutFolder4 .aboutFolderIconSvgCover path {
+    color: var(--about-folder-color-4);
+    fill: var(--about-folder-color-4);
+}
+.aboutFolder4 .aboutFolderFeedback,
+.aboutFolder4 .aboutFolderIconSvgDeco path,
+.aboutFolder4 .aboutFolderIconImgBack path {
+    color: var(--about-folder-color-4-dark);
+    fill: var(--about-folder-color-4-dark);
+}
+.aboutFolder5 .aboutFolderIconSvgCover path {
+    color: var(--about-folder-color-5);
+    fill: var(--about-folder-color-5);
+}
+.aboutFolder5 .aboutFolderFeedback,
+.aboutFolder5 .aboutFolderIconSvgDeco path,
+.aboutFolder5 .aboutFolderIconImgBack path {
+    color: var(--about-folder-color-5-dark);
+    fill: var(--about-folder-color-5-dark);
+}
+.aboutFolder6 .aboutFolderIconSvgCover path {
+    color: var(--about-folder-color-6);
+    fill: var(--about-folder-color-6);
+}
+.aboutFolder6 .aboutFolderFeedback,
+.aboutFolder6 .aboutFolderIconSvgDeco path,
+.aboutFolder6 .aboutFolderIconImgBack path {
+    color: var(--about-folder-color-6-dark);
+    fill: var(--about-folder-color-6-dark);
+}
+
+/* .aboutImages {
     position: relative;
     width: 50rem;
     height: 27rem;
@@ -570,7 +744,7 @@ body *::selection {
 
 #aboutImage3 {
     left: 150%;
-}
+} */
 
 @media (max-width: 900px) {
     .aboutSkills > div {
