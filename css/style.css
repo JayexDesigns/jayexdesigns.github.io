@@ -5,7 +5,7 @@
     --text-color-shade: #dddddd;
     --primary-color: #ff0066;
 
-    --about-folder-width: 6em;
+    --about-folder-width: 6rem;
 	--about-folder-height: calc(0.8 * var(--about-folder-width));
 	--about-folder-cover-height: calc(0.7 * var(--about-folder-width));
 	--about-folder-slip-height: calc(var(--about-folder-height) - var(--about-folder-cover-height));
@@ -67,7 +67,7 @@ body *::selection {
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    z-index: 1;
+    z-index: 50;
 }
 
 .header > div {
@@ -641,9 +641,10 @@ body *::selection {
 	position: relative;
 	display: inline-block;
 	line-height: 1.15;
-	margin: 0.75em 0 0;
-	font-size: var(--about-folder-title-size);
+	margin: 0.75rem 0 0 0 !important;
+	font-size: var(--about-folder-title-size) !important;
     color: var(--text-color);
+    font-weight: 800;
 }
 
 .aboutFolder1 .aboutFolderIconSvgCover path {
