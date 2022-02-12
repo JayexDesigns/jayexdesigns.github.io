@@ -707,65 +707,15 @@ body *::selection {
     fill: var(--about-folder-color-6-dark);
 }
 
-/* .aboutImages {
-    position: relative;
-    width: 50rem;
-    height: 27rem;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    overflow: hidden;
-}
-
-.aboutImages > img {
-    position: absolute;
-    transform: translate(-50%, -50%);
-    width: 30rem;
-    top: 50%;
-    transition: left 1s ease-in-out;
-}
-
-#aboutImage1 {
-    left: -50%;
-}
-
-#aboutImage2 {
-    left: 50%;
-}
-
-#aboutImage3 {
-    left: 150%;
-} */
-
 @media (max-width: 900px) {
     .aboutSkills > div {
         margin: 0;
-    }
-
-    .aboutImages {
-        height: 20rem;
-        width: 30rem;
-    }
-
-    .aboutImages > img {
-        width: 20rem;
     }
 }
 
 @media (max-width: 650px) {
     .about > div > section {
         margin: 6rem 3rem 0 3rem;
-    }
-}
-
-@media (max-width: 500px) {
-    .aboutImages {
-        width: 100vw;
-    }
-
-    .aboutImages > img {
-        width: 80%;
     }
 }
 
