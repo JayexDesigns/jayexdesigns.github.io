@@ -1,4 +1,4 @@
-<h3 align="center"><img src='https://raw.githubusercontent.com/JayexDesigns/jayexdesigns.github.io/master/assets/img/whiteLogo.png' width='10%'></h3>
+<h3 align="center"><img src='https://raw.githubusercontent.com/JayexDesigns/jayexdesigns.github.io/master/assets/img/white-logo.png' width='10%'></h3>
 <h1 align="center">Jayex Designs Portfolio</h1>
 <p align="center">This is my personal portfolio</p>
 <br/>
