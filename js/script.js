@@ -135,6 +135,12 @@ sr.reveal('.aboutCertificates', {
     distance: '5rem',
 });
 
+sr.reveal('.aboutFolder', {
+    duration: 1000,
+    origin: 'bottom',
+    distance: '5rem',
+});
+
 sr.reveal('.contentSection', {
     duration: 1000,
     origin: 'bottom',

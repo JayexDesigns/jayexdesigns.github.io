@@ -576,18 +576,6 @@ body *::selection {
     transform: scale(1.1);
 }
 
-/* .aboutFolderFeedback {
-	position: absolute;
-	width: var(--about-thumb-width);
-	height: var(--about-thumb-width);
-	border-radius: 50%;
-	top: 50%;
-	left: 50%;
-	margin: calc(var(--about-thumb-width) / -1.3 + var(--about-folder-slip-height) / 2) 0 0 calc(var(--about-thumb-width) / -2);
-	pointer-events: none;
-	opacity: 0;
-} */
-
 .aboutFolderIcon {
 	position: relative;
 	width: 100%;
@@ -643,6 +631,10 @@ body *::selection {
 	display: block;
 	position: absolute;
     z-index: 10;
+    transition: .1s ease-out;
+}
+.aboutFolderThumb img:hover {
+    transform: scale(1.1);
 }
 
 .aboutFolderTitle {
