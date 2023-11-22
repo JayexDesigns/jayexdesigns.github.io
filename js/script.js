@@ -60,24 +60,12 @@ setInterval(() => {
 }, 50);
 
 // Scroll Reveal
-window.sr = ScrollReveal();
+window.sr = ScrollReveal({reset: false});
 
 sr.reveal(".header", {
 	duration: 500,
 	origin: "top",
 	distance: "3rem"
-});
-
-sr.reveal(".homeText", {
-	duration: 1000,
-	origin: "left",
-	distance: "5rem"
-});
-
-sr.reveal(".homeLogo", {
-	duration: 1000,
-	origin: "right",
-	distance: "5rem"
 });
 
 sr.reveal(".sectionTitle", {
@@ -92,39 +80,14 @@ sr.reveal(".workElement", {
 	distance: "5rem"
 });
 
-sr.reveal(".aboutText", {
-	duration: 1000,
-	origin: "left",
-	distance: "5rem"
-});
-
 sr.reveal(".aboutSkill", {
 	duration: 500,
 	scale: 0.8
 });
 
-sr.reveal(".aboutResume", {
-	duration: 500,
-	origin: "bottom",
-	distance: "5rem"
-});
-
-sr.reveal(".aboutCertificates", {
-	duration: 500,
-	origin: "bottom",
-	distance: "5rem"
-});
-
 sr.reveal(".aboutFolder", {
 	duration: 1000,
-	origin: "bottom",
-	distance: "5rem"
-});
-
-sr.reveal(".contentSection", {
-	duration: 1000,
-	origin: "bottom",
-	distance: "5rem"
+	scale: 0.8
 });
 
 sr.reveal(".contactLink", {
