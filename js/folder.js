@@ -13,7 +13,7 @@ class Folder {
 		this._initEvents();
 	}
 
-	// Remove Or Stop any animation.
+	// Remove Or Stop Any Animation.
 	_removeAnimeTargets() {
 		anime.remove(this.DOM.preview);
 		anime.remove(this.DOM.previewElems);

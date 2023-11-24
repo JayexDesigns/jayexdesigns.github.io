@@ -1,39 +1,39 @@
 // Change Heights When Page Is Loaded
 const loadHandle = () => {
-	let headerHeight = document.getElementsByClassName("header")[0].offsetHeight;
-	document.getElementById("homeHeader").style.top = `${-headerHeight}px`;
-	document.getElementById("worksHeader").style.top = `${document.getElementsByClassName("works")[0].offsetTop - headerHeight}px`;
-	document.getElementById("aboutHeader").style.top = `${document.getElementsByClassName("about")[0].offsetTop - headerHeight}px`;
-	document.getElementById("contactHeader").style.top = `${document.getElementsByClassName("contact")[0].offsetTop - headerHeight}px`;
-	document.getElementById("javascriptSection").style.top = `${document.getElementById("javascriptSection").offsetTop - headerHeight}px`;
-	document.getElementById("pythonSection").style.top = `${document.getElementById("pythonSection").offsetTop - headerHeight}px`;
-	document.getElementById("graphicdesignSection").style.top = `${document.getElementById("graphicdesignSection").offsetTop - headerHeight}px`;
-	document.getElementById("videoeditingSection").style.top = `${document.getElementById("videoeditingSection").offsetTop - headerHeight}px`;
-	document.getElementById("othersSection").style.top = `${document.getElementById("othersSection").offsetTop - headerHeight}px`;
+	const headerHeight = document.querySelector(".header").offsetHeight;
+	document.querySelector("#homeHeader").style.top = `${-headerHeight}px`;
+	document.querySelector("#worksHeader").style.top = `${document.querySelector(".works").offsetTop - headerHeight}px`;
+	document.querySelector("#aboutHeader").style.top = `${document.querySelector(".about").offsetTop - headerHeight}px`;
+	document.querySelector("#contactHeader").style.top = `${document.querySelector(".contact").offsetTop - headerHeight}px`;
+	document.querySelector("#javascriptSection").style.top = `${document.querySelector("#javascriptSection").offsetTop - headerHeight}px`;
+	document.querySelector("#pythonSection").style.top = `${document.querySelector("#pythonSection").offsetTop - headerHeight}px`;
+	document.querySelector("#graphicdesignSection").style.top = `${document.querySelector("#graphicdesignSection").offsetTop - headerHeight}px`;
+	document.querySelector("#videoeditingSection").style.top = `${document.querySelector("#videoeditingSection").offsetTop - headerHeight}px`;
+	document.querySelector("#othersSection").style.top = `${document.querySelector("#othersSection").offsetTop - headerHeight}px`;
 	scrollHandle();
 };
 
 // Change Colors Of Header Depending On Section
-var navItems = [document.getElementsByClassName("navHome")[0].childNodes[0], document.getElementsByClassName("navWorks")[0].childNodes[0], document.getElementsByClassName("navAbout")[0].childNodes[0], document.getElementsByClassName("navContact")[0].childNodes[0]];
+const navItems = [document.querySelector(".navHome a"), document.querySelector(".navWorks a"), document.querySelector(".navAbout a"), document.querySelector(".navContact a")];
 
 const assignColor = param => {
 	for (let i = 0; i < navItems.length; ++i) {
-		i == param ? (navItems[i].style.color = "var(--primary-color)") : (navItems[i].style.color = "var(--text-color)");
+		navItems[i].style.color = i == param ? "var(--primary-color)" : "var(--text-color)";
 	}
 };
 
-var header = document.getElementsByClassName("header")[0];
-var home = document.getElementsByClassName("home")[0];
-var works = document.getElementsByClassName("works")[0];
-var about = document.getElementsByClassName("about")[0];
-var contact = document.getElementsByClassName("contact")[0];
+const header = document.querySelector(".header");
+const home = document.querySelector(".home");
+const works = document.querySelector(".works");
+const about = document.querySelector(".about");
+const contact = document.querySelector(".contact");
 
 const scrollHandle = () => {
-	let headerHeight = header.offsetHeight;
-	let homePos = home.getBoundingClientRect().top;
-	let worksPos = works.getBoundingClientRect().top;
-	let aboutPos = about.getBoundingClientRect().top;
-	let contactPos = contact.getBoundingClientRect().top;
+	const headerHeight = header.offsetHeight;
+	const homePos = home.getBoundingClientRect().top;
+	const worksPos = works.getBoundingClientRect().top;
+	const aboutPos = about.getBoundingClientRect().top;
+	const contactPos = contact.getBoundingClientRect().top;
 	if (contactPos <= headerHeight + window.innerHeight / 2) {
 		assignColor(3);
 	} else if (aboutPos <= headerHeight + window.innerHeight / 2) {
@@ -48,13 +48,13 @@ const scrollHandle = () => {
 window.addEventListener("scroll", scrollHandle);
 
 // Day Js
-var timeStart = new Date("04/25/2002");
-var years = () => {
-	let time = dayjs().diff(dayjs(timeStart.getTime()), "year", true);
+const timeStart = new Date("04/25/2002");
+const years = () => {
+	const time = dayjs().diff(dayjs(timeStart.getTime()), "year", true);
 	return time.toString().substring(0, 11);
 };
 
-var currentAge = document.getElementById("years");
+const currentAge = document.querySelector("#years");
 setInterval(() => {
 	currentAge.innerText = years();
 }, 50);
