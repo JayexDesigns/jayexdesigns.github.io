@@ -9,7 +9,6 @@ const loadHandle = () => {
 	document.querySelector("#pythonSection").style.top = `${document.querySelector("#pythonSection").offsetTop - headerHeight}px`;
 	document.querySelector("#graphicdesignSection").style.top = `${document.querySelector("#graphicdesignSection").offsetTop - headerHeight}px`;
 	document.querySelector("#videoeditingSection").style.top = `${document.querySelector("#videoeditingSection").offsetTop - headerHeight}px`;
-	document.querySelector("#othersSection").style.top = `${document.querySelector("#othersSection").offsetTop - headerHeight}px`;
 	scrollHandle();
 };
 
