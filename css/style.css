@@ -218,6 +218,11 @@ body *::selection {
 	}
 }
 
+main {
+	max-width: 2000px;
+	margin: auto;
+}
+
 .contentSection {
 	padding-top: 6rem;
 	max-width: 2500px;
@@ -231,7 +236,7 @@ body *::selection {
 .home {
 	padding-top: 10rem;
 	padding-bottom: 10rem;
-	height: calc(100vh - 16rem);
+	height: 500px;
 	max-height: 100rem;
 }
 
