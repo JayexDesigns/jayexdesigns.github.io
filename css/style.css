@@ -1,9 +1,12 @@
 :root {
-	--background-color: #1a1a1a;
-	--background-color-transparent: #1a1a1aaa;
-	--text-color: #ffffff;
-	--text-color-shade: #dddddd;
+	--background-color: #eeeeee;
+	--background-color-transparent: #eeeeeeaa;
+	--text-color: #1a1a1a;
+	--text-color-shade: #333333;
 	--primary-color: #ff0066;
+
+	--section-title-background-color: #ff0066;
+	--section-title-text-color: #ffffff;
 
 	--about-folder-width: 6rem;
 	--about-folder-height: calc(0.8 * var(--about-folder-width));
@@ -24,7 +27,7 @@
 	--about-folder-color-6: #ff3535;
 	--about-folder-color-6-dark: #b10000;
 
-	--github-color: #ffffff;
+	--github-color: #1a1a1a;
 	--linkedin-color: #7abbfc;
 	--twitter-color: #4aacf3;
 	--discord-color: #7289da;
@@ -32,6 +35,17 @@
 	--twitch-color: #6440a5;
 	--youtube-color: #ff0000;
 	--reddit-color: #ff4500;
+}
+
+@media (prefers-color-scheme: dark) {
+	:root {
+		--background-color: #1a1a1a;
+		--background-color-transparent: #1a1a1aaa;
+		--text-color: #ffffff;
+		--text-color-shade: #dddddd;
+
+		--github-color: #ffffff;
+	}
 }
 
 html {
@@ -73,8 +87,9 @@ body *::selection {
 	height: 4.5rem;
 }
 
-.header > div > a > img {
+.header > div > a > svg {
 	height: 4.5rem;
+	width: auto;
 }
 
 .header > nav > ul {
@@ -253,8 +268,9 @@ main {
 	flex-direction: column;
 }
 
-.home > div > section > img {
+.home > div > section > svg {
 	height: 35rem;
+	width: auto;
 }
 
 .home > div > section {
@@ -280,7 +296,7 @@ main {
 		flex-direction: column-reverse;
 	}
 
-	.home > div > section > img {
+	.home > div > section > svg {
 		height: 10rem;
 		margin-bottom: 2rem;
 	}
@@ -330,9 +346,9 @@ main {
 .sectionTitle > h1 {
 	font-size: 2rem;
 	font-weight: 700;
-	background-color: var(--primary-color);
-	color: var(--text-color);
-	padding: 0.5rem 0.75rem;
+	background-color: var(--section-title-background-color);
+	color: var(--section-title-text-color);
+	padding: 0.5rem 1.5rem;
 	display: inline-block;
 }
 
